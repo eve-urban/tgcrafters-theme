@@ -1,0 +1,29 @@
+.footer {
+  font-family: $font-releway;
+  background-color: $bg-gray;
+  &__container {
+    @include container();
+    h4 {
+      font-size: $base-font-size;
+      font-family: $font-releway;
+      font-weight: $font-normal;
+    }
+    p {
+      font-size: $small-font-size;
+    }
+    &--top {
+      display: flex;
+      border-bottom: 1px solid $color-gray-light;
+    }
+    &--bottom {
+      display: flex;
+    }
+    &__item {
+      width: 25%;
+      padding: $content-margin;
+    }
+  }
+  &__logo {
+    max-width: 9rem;
+  }
+}

@@ -1,0 +1,23 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="usa-grid usa-section">
+{% for post in posts %}
+<article class="one tease">
+	<div class="one-third">
+	{% if post.get_thumbnail %}
+		<img src="{{post.thumbnail.src}}"  alt="{{post.title}}">
+	{% endif %}
+	</div>
+	<div class="two-thirds"> 
+		<h3><a href="{{post.link}}">{{post.title}}</a></h3>
+		<p class="post-meta">{{post.date}}</p>
+		<p>{{post.get_preview}}</p>
+	</div>
+</article>
+{% endfor %}
+<div class="one">
+{% include 'pagination.twig' %}
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,184 @@
+/*!
+Theme Name: TG crafters
+Theme URI:
+Author: Eve Urbanowska
+Author URI:
+Description: All rights reserved to TG Crafters Ltd
+Version: 1.0.0
+License: GPL
+License URI: http://bootsmooth.com/license
+Text Domain: tgcrafters
+Tags:
+*/
+@import "./settings/variables";
+@import "./settings/measures";
+@import "./settings/media-queries";
+
+@import "./tools/mixins--settings";
+@import "./tools/helpers";
+
+
+
+@import "./node_modules/uswds/src/stylesheets/uswds";
+
+
+
+@mixin span-responsive($cols) {
+    @include span-columns($cols);
+    @media (max-width: $small-screen) {
+       @include span-columns(12);
+   }
+}
+
+
+// navbar
+.usa-header-extended {
+	border-bottom: none;
+
+	.usa-nav-container {
+		max-width: 100%;
+	}
+
+	.usa-navbar {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+nav.usa-nav {
+
+	float: none;
+	padding-top: 0px;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid $color-gray-light;
+
+	@media (min-width: #{$nav-width + 1}) {
+		width: 100%;
+	}
+
+
+	.usa-nav-inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.usa-nav-close {
+		color: $color-primary;
+	}
+}
+
+// section
+.usa-section {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+// grid layout
+.usa-grid {
+    display: flex;
+    flex-wrap: wrap;
+    p {
+        width: 100%;
+    }
+	.one {
+		width: 100%;
+	}
+    .one-third {
+        @include span-responsive(4);
+    }
+    .one-fourth {
+        @include span-responsive(3);
+    }
+    .one-half {
+        @include span-responsive(6);
+        margin-right: 1.1%;
+    }
+    .two-thirds {
+        @include span-responsive(8);
+    }
+    .three-fourths {
+        @include span-responsive(9);
+    }
+}
+
+.single {
+    article {
+       @include span-responsive(9);
+
+    }
+    aside {
+        @include span-responsive(3);
+    }
+}
+
+footer {
+
+	.usa-footer-primary-section {
+		padding: 1em 0;
+	}
+
+    .usa-footer-column {
+        @include span-responsive(2);
+    }
+    .usa-footer-content, .usa-footer-info {
+        @include span-responsive(6);
+    }
+}
+
+// hero
+.usa-hero {
+	background-image: none;
+	background: $color-secondary-dark;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, $color-primary-alt-dark, $color-secondary-dark);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, $color-primary-alt-dark, $color-secondary-dark); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+// blog post
+.post-meta {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.tease {
+	margin-bottom: 1.5em;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+}
+
+// pagination
+ul.pagination {
+	list-style-type: none;
+	li {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
+// sidebar
+aside {
+    .usa-heading-alt {
+        // border-bottom: 1px solid #5b616b;
+        padding-bottom: .8rem;
+    }
+
+	.sidebar-widget {
+		ul {
+			@extend .usa-sidenav-list;
+		}
+	}
+}
+
+
+@import "./base/type";
+@import "./components/icons";
+@import "./components/header";
+@import "./components/slider";
+@import "./components/footer";

@@ -1,0 +1,95 @@
+.top-nav {
+  height: 40px;
+  background-color: $color-gray-lightest;
+  color: $color-gray;
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0.7rem 1rem;
+    font-size: $small-font-size;
+    font-family: $font-lato;
+  }
+}
+
+.header {
+  &__container {
+    max-width: $container-width--large;
+    height: $header-hight;
+  }
+  &__logo {
+    line-height: 0;
+    margin-top: ($content-margin);
+    img {
+      width: 100px;
+    }
+  }
+  &__information {
+    font-size: $small-font-size;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    line-height: 1.6;
+    font-family: $font-raleway;
+    height: $header-hight;
+    color: $color-gray;
+    &--boxone {
+      padding-right: $content-margin * 2;
+    }
+    span {
+      font-size: $base-font-size;
+      a {
+        text-decoration: none;
+        color: $color-gray;
+      }
+      .arrows {
+        position: relative;
+        bottom: 2px;
+      }
+    }
+  }
+}
+
+
+.navigation {
+  border-top: 1px solid $color-gray-lightest;
+  background-color: $color-white;
+  &__link {
+    color: $color-black;
+    font-family: $font-releway;
+  }
+  &__container {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+  &__secondary {
+      top: -10rem;
+    a {
+      font-size: $small-font-size;
+    }
+  }
+}
+
+.usa-nav-primary>li>a {
+  color: $color-black;
+  font-family: $font-releway;
+  padding: 1rem;
+  font-size: $base-font-size;
+}
+
+.usa-menu-btn {
+  background-color: $grey-company;
+}
+
+nav.usa-nav {
+  //border-top: 1px solid $color-border;
+  border-top: none;
+  border-bottom: none;
+}
+
+.usa-nav-link:hover {
+  span {
+    border-bottom: .4rem solid $gold-company;
+    color: $color-gray;
+  }
+}

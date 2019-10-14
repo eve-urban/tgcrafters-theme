@@ -1,0 +1,13 @@
+$media-queries: (
+  x-small: (min-width: 10rem),
+  small: (min-width: 33.3rem),
+  small--max: (max-width: 33.3rem),
+  medium: (min-width: 46.875rem),
+  medium--max: (max-width: 46.875rem),
+  two-column: (min-width: 60rem),
+  large: (min-width: 66.6rem),
+  extra-large: (min-width: 91rem),
+  double-extra-large: (min-width: 106rem),
+  desktop: (min-width: 115rem),
+
+);

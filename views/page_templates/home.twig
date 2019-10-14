@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+{% block content %}
+<section>
+
+
+  <div class="wrap">
+  <div id="arrow-left" class="arrow"></div>
+  <div id="slider" class="slider">
+    <div class="slide slide1" style="background-image: url('https://static.pexels.com/photos/302889/pexels-photo-302889.jpeg')">
+      <div class="slider__container">
+        <div class="slider__box">
+          <div class="slider__box__heading">
+            <h1>This is my heading</h1>
+          </div>
+          <div class="slider__box__content">
+          <p>Lorem Ipsum a galley make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently ?</p><br/>
+<a href=""><button>Click here</button></a>
+
+</div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="slide slide2" style="background-image: url('https://static.pexels.com/photos/302892/pexels-photo-302892.jpeg')">
+      <div class="slide-content">
+        <span>Image Two</span>
+      </div>
+    </div>
+    <div class="slide slide3" style="background-image: url('https://static.pexels.com/photos/226633/pexels-photo-226633.jpeg')">
+      <div class="slide-content">
+        <span>Image Three</span>
+      </div>
+    </div>
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+</section>
+
+<section class="usa-section usa-grid">
+    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+    	{% include template_from_string(post.content) %}
+    </article>
+</section>
+<section class="contact">
+contact
+</section>
+{% endblock %}
