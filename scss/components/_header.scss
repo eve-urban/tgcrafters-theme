@@ -5,9 +5,14 @@
   &__container {
     max-width: $container-width;
     margin: 0 auto;
-    padding: 0.7rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: $small-font-size;
     font-family: $font-lato;
+    position: relative;
+  }
+  a {
+    color: $color-gray;
+    text-decoration: none;
   }
 }
 
@@ -35,6 +40,16 @@
     color: $color-gray;
     &--boxone {
       padding-right: $content-margin * 2;
+      display: flex;
+      align-items: center;
+      a {
+        border: 1px solid $gold-company !important;
+        padding: 3px;
+      }
+    }
+    &--boxtwo {
+      display: flex;
+      align-items: center;
     }
     span {
       font-size: $base-font-size;
@@ -92,4 +107,16 @@ nav.usa-nav {
     border-bottom: .4rem solid $gold-company;
     color: $color-gray;
   }
+}
+
+.usa-nav.is-visible {
+  display: inline;
+  width: 20rem;
+}
+
+.usa-navbar {
+  border-bottom: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

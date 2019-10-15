@@ -5,4 +5,22 @@
     float: left;
     margin-right: 0.5rem;
   }
+  &--facebook {
+    width: 20px;
+    height: 17px;
+    fill: $color-gray;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    &:hover {
+      fill: $color-black;
+
+    }
+  }
+
+
+  &--header-mail,
+  &--header-mail {
+    fill: $color-gray;
+  }
 }
