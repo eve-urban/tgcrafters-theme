@@ -1,0 +1,30 @@
+.quote {
+  &__container {
+    @include container();
+    padding-top: $content-margin * 2;
+    padding-bottom: $content-margin * 2;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-releway;
+    @include mq(medium--max) {
+      flex-direction: column;
+    }
+  }
+  &__partone {
+    display: flex;
+    h4 {
+      margin: 0;
+
+    }
+    svg {
+      width: 80px;
+      height: 80px;
+      fill: $gold-company;
+      margin-right: $content-margin * 2;
+    }
+    div {
+      padding-right: $content-margin;
+
+    }
+  }
+}

@@ -6,8 +6,12 @@
     display: flex;
     padding-top: $content-margin * 2;
     padding-bottom: $content-margin * 2;
-    height: 9rem;
+    //height: 9rem;
     font-family: $font-lato;
+    justify-content: space-between;
+    @include mq(medium--max) {
+      flex-direction: column;
+    }
     a {
       color: $color-white;
       text-decoration: none;
@@ -15,12 +19,17 @@
   }
   &__box {
     display: flex;
-    width: 33%;
+    //width: 33%;
+    @include mq(medium--max) {
+      margin-bottom: $content-margin * 2;
+      width: 100%;
+    }
   }
   svg {
     fill: $color-white;
     height: 80px;
     width: 80px;
+    min-width: 80px;
     -webkit-transition: width 1s, height 1s; /* For Safari 3.1 to 6.0 */
     transition: width 1s, height 1s;
     &:hover {

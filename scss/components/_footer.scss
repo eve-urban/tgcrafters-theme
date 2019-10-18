@@ -17,13 +17,43 @@
     }
     &--bottom {
       display: flex;
+      @include mq(medium--max) {
+        flex-direction: column;
+      }
     }
     &__item {
       width: 25%;
-      padding: $content-margin  $content-margin  $content-margin 0;
+      @include mq(medium--max) {
+        width: 100%;
+      }
+      padding: $content-margin  ($content-margin * 2)  $content-margin 0;
+      ul {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        li {
+          a {
+            color: $color-black;
+          }
+        }
+      }
     }
   }
   &__logo {
     max-width: 9rem;
+  }
+  &__copyright {
+    background-color: $color-gray;
+    &__container {
+      @include container();
+      text-align: center;
+      color: $color-gray-lighter;
+      font-size: $small-font-size;
+
+      a {
+        color: $color-gray-lighter;
+        text-decoration: none;
+      }
+    }
   }
 }

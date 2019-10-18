@@ -3,3 +3,11 @@
   margin: 0 auto;
   padding: 0.7rem 1rem;
 }
+
+@mixin heading_underline() {
+  content: '';
+  width: 80px;
+  display: block;
+  height: 2px;
+  background-color: $gold-company;
+}

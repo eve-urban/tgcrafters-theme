@@ -1,0 +1,15 @@
+.golden-btn {
+  background-color: transparent;
+  border-radius: 0;
+  border: 3px solid $gold-company;
+  color: $gold-company;
+  padding: 0.7rem 2rem;
+  height: auto;
+  @include mq(medium--max) {
+    width: 100%;
+  }
+  &:hover {
+    background-color: $gold-company;
+    color: $color-white;
+  }
+}

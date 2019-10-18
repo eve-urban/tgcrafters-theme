@@ -1,0 +1,33 @@
+.services {
+  background-color: $bg-gray;
+  font-family: $font-raleway;
+  &__container {
+    text-align: center;
+    @include container();
+    h3 {
+      &:after{
+        @include heading_underline()
+        margin: $content-margin / 2 auto 0;
+      }
+    }
+  }
+  &__box {
+    margin-top: $content-margin * 2;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    @include mq(medium--max) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    h4 {
+      margin-top: $content-margin;
+      font-size: $medium-font-size;
+
+    }
+    @include mq(medium--max) {
+      margin-bottom: $content-margin * 2;
+    }
+  }
+}

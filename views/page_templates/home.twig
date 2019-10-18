@@ -2,7 +2,6 @@
 {% block content %}
 <section>
 
-
   <div class="wrap">
   <div id="arrow-left" class="arrow"></div>
   <div id="slider" class="slider">
@@ -37,40 +36,14 @@
 </div>
 
 </section>
+{% include 'sections/services.twig' %}
+{% include 'sections/quote.twig' %}
+
 
 <section class="usa-section usa-grid">
     <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
     	{% include template_from_string(post.content) %}
     </article>
 </section>
-<section class="contact">
-  <div class="contact__container">
-    <div class="contact__box">
-      <svg class="icon icon--smartphone" role="presentation">
-        <use xlink:href="#icon-smartphone"></use>
-      </svg>
-      <p>
-        Phone:<br/>
-        07511407624
-      </p>
-    </div>
-    <div class="contact__box">
-      <svg class="icon icon--mail" role="presentation">
-        <use xlink:href="#icon-mail"></use>
-      </svg>
-      <p>
-        <a href="mailt:contact@tgcrafters.co.uk">contact@tgcrafters.co.uk</a>
-      </p>
-    </div>
-    <div class="contact__box">
-      <svg class="icon icon--facebook-2" role="presentation">
-        <use xlink:href="#icon-facebook-2"></use>
-      </svg>
-      <p>
-        <a href="£">Join us on facebook<br/></a>
-      </p>
-    </div>
-
-  </div>
-</section>
+{% include 'sections/contact.twig' %}
 {% endblock %}

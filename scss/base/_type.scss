@@ -7,6 +7,13 @@ $weight: 300;
 $weight--bold: 400;
 $weight--black: 700;
 
+
 html {
   font-size: $base-font;
+}
+body, h1, h2, h3, h4, h5, p, a {
+  font-family: $font-raleway;
+}
+a {
+  text-decoration: none;
 }
