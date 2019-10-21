@@ -12,7 +12,7 @@
             <h1>This is my heading</h1>
           </div>
           <div class="slider__box__content">
-          <p>Lorem Ipsum a galley make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently ?</p><br/>
+          <p>Lorem Ipsum a galley make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><br/>
 <a href=""><button>Click here</button></a>
 
 </div>
@@ -36,8 +36,19 @@
 </div>
 
 </section>
+
+
 {% include 'sections/services.twig' %}
 {% include 'sections/quote.twig' %}
+{% include 'sections/intro.twig' %}
+{% include 'sections/reviews.twig' %}
+
+<section class="fb-buttons">
+  <div class="fb-buttons__container">
+    {% include 'sections/fb_buttons.twig' %}
+  </div>
+</section>
+
 
 
 <section class="usa-section usa-grid">

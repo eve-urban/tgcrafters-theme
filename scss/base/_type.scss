@@ -17,3 +17,9 @@ body, h1, h2, h3, h4, h5, p, a {
 a {
   text-decoration: none;
 }
+
+
+button:not([disabled]):focus, input:not([disabled]):focus, select:not([disabled]):focus, textarea:not([disabled]):focus {
+    outline: none;
+
+}

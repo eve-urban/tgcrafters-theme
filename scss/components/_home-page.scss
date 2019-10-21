@@ -1,0 +1,7 @@
+.fb-buttons {
+  &__container {
+    @include container();
+    text-align: center;
+    height: 29px;
+  }
+}

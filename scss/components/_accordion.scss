@@ -1,0 +1,40 @@
+.accordion-tabs {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  &:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active,
+  &:hover {
+    background-color: $grey-company;
+    color: $color-white;
+  }
+
+}
+
+.accordion-tabs.active {
+  &:after {
+    content: "\2212";
+  }
+}
+
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+
+}

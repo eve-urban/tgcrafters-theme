@@ -3,8 +3,11 @@
 
 import uswds from "../node_modules/uswds/src/js/start";
 import sliderInit from "./modules/_slider";
+import accordion from "./modules/_accordion";
 
 sliderInit();
+accordion();
+
 window.uswds = uswds;
 
 class App {

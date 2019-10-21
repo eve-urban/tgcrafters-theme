@@ -1,0 +1,18 @@
+.reviews {
+  background: url('img/reviews.jpg') no-repeat center center;
+  background-size: auto;
+  background-attachment: scroll;
+  background-color: $gold-company;
+  &__container {
+    @include container();
+    text-align: center;
+    padding-top: $content-margin * 6;
+    padding-bottom: $content-margin * 4;
+    h5 {
+      margin-top: $content-margin;
+    }
+    svg {
+      height: 100px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  row-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  &:focus {
+		box-shadow: none;
+		outline: none;
+	}
+
+  .button-list {
+		flex: 0 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+	}
+  button {
+		border-radius: 0;
+    background-color: $color-white;
+		margin: 0;
+		border: 1px solid transparent;
+		color: #666;
+		transition: all .6s ease-in-out;
+    &:hover {
+    	color: #333;
+    }
+	}
+  section {
+		flex: 2 1 auto;
+		display: none;
+		background: #fff;
+		background: rgba(255,255,255,.6);
+		padding: 1rem;
+	}
+
+}
+
+
+
+/* ----------------
+		optional fade-in for images
+---------------- */
+@media screen,handheld {
+  @keyframes fadeIn {
+  	0% { opacity: 0; }
+  	100% { opacity: 1; }
+  }
+
+  .tabs img {
+  	animation: .5s fadeIn;
+  }
+} /* / @media screen,handheld */
+
+/* ----------------------------*/
+
+/* ----------------
+		tabs
+---------------- */
+@media all {
+
+
+
+
+
+	.tabs button:not(:first-of-type) {
+		border-top-color: #aaa;
+	}
+	.tabs button.active {
+		background: #fff;
+		background: rgba(255,255,255,.6);
+		color: #111;
+	}
+
+
+  .tabs section.active {
+		display: block;
+	}
+
+
+} /* / @media all */
+
+@media (max-width: 900px) {
+	.tabs {
+		flex-direction: column;
+	}
+	.tabs .button-list {
+		flex-direction: row;
+		min-width: 100%;
+	}
+	.tabs button:first-child:not(.active) {
+		border-top: 1px solid #aaa;
+		border-left: 1px solid #aaa;
+	}
+	.tabs button.active {
+		border-right: 1px solid #aaa;
+	}
+} /* / @media (max-width: 900px) */
+
+
+/* ---------------------------- */
+/* ---------------------------- */
+/* ---------------------------- */
+/* POSSIBLE LATER ADD-ON (HORIZONTAL LABELS) */

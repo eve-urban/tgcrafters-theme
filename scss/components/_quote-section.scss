@@ -1,4 +1,5 @@
 .quote {
+  background-color: $bg-gray;
   &__container {
     @include container();
     padding-top: $content-margin * 2;
