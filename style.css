@@ -594,7 +594,7 @@ a{text-decoration:none}
 button:not([disabled]):focus, input:not([disabled]):focus, select:not([disabled]):focus, textarea:not([disabled]):focus{outline:none}
 .golden-btn{background-color:transparent;border-radius:0;border:3px solid #f4bc16;color:#f4bc16;padding:.7rem 2rem;height:auto}
 @media (max-width:46.875rem){.golden-btn{width:100%}}
-.golden-btn:hover{background-color:#f4bc16;color:#fff}
+.golden-btn:hover{background-color:#f4bc16;color:#fff!important;-webkit-transition:background-color .5s;transition:background-color .5s}
 .icon--header-mail, .icon--phone-mail{width:3rem;float:left;margin-right:.5rem}
 .icon--facebook{width:20px;height:17px;fill:#5b616b;position:relative;top:3px;cursor:pointer}
 .icon--facebook:hover{fill:#000}
@@ -631,7 +631,7 @@ nav.usa-nav{border-top:none;border-bottom:none}
 .usa-nav-submenu{background-color:#fff}
 .usa-nav-primary button, .usa-nav-submenu a{font-size:1rem;font-family:"Raleway",sans-serif}
 .usa-nav-submenu a, .usa-nav-submenu a:hover{background-color:#fff;color:#000}
-#slider, .slide-content, .wrap, body{margin:0;padding:0;width:100%;height:60vh}
+#slider, .slide-content, .wrap, body{margin:0;padding:0;width:100%;min-height:400px}
 #slider .slide, .slide-content .slide, .wrap .slide, body .slide{background-size:cover;background-position:center;background-repeat:no-repeat}
 #slider .slide .slide-content, .slide-content .slide .slide-content, .wrap .slide .slide-content, body .slide .slide-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
 #slider .slide .slide-content span, .slide-content .slide .slide-content span, .wrap .slide .slide-content span, body .slide .slide-content span{font-size:5rem;color:#fff}
@@ -658,12 +658,27 @@ nav.usa-nav{border-top:none;border-bottom:none}
 .contact svg:hover{height:85px;width:85px}
 .contact p{padding-left:1rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .services{font-family:"Raleway",sans-serif}
-.services__container{text-align:center;max-width:75rem;margin:0 auto;padding:2rem 1rem}
+.services__intro{margin-top:2rem;margin-bottom:2rem}
+.services__container{text-align:center;max-width:75rem;margin:0 auto;padding:2rem 1rem;padding:0}
 .intro__container h5:after, .services__container h3:after{content:'';width:80px;display:block;height:2px;background-color:#f4bc16;margin:.5rem auto 0}
-.services__box{margin-top:2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-line-pack:center;align-content:center}
+.services__box{margin-top:2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-line-pack:center;align-content:center}
 @media (max-width:46.875rem){.services__box{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}
+.services__item{width:30%}
 .services__item h4{margin-top:1rem;font-size:1.5rem}
 @media (max-width:46.875rem){.services__item{margin-bottom:2rem}}
+.services__item p{margin-bottom:2rem}
+.img-container{position:relative;width:350px;height:250px}
+.img-container:hover .img-container__button{opacity:1;-webkit-transition:opacity .3s;transition:opacity .3s}
+.img-container:hover .img-container__button a{color:#fff}
+.img-container:hover .img-container__button a:visited{color:#f4bc16}
+.img-container:hover .img-container__tile{top:50px}
+.img-container:hover .img-container__overlay, .img-container:hover .overlay{display:block;background:rgba(0,0,0,.3)}
+.img-container img, .img-container__overlay{position:absolute;width:350px;height:250px;left:0}
+.img-container__overlay{top:0;width:100%;height:100%;background:0 0;-webkit-transition:background .5s ease;transition:background .5s ease}
+.img-container__button, .img-container__title{position:absolute;width:350px;left:0;text-align:center}
+.img-container__title{font-weight:700;font-size:30px;text-transform:uppercase;color:#fff;z-index:1;text-shadow:2px 2px #000;top:86px;-webkit-transition:top .5s ease;transition:top .5s ease}
+.img-container__button{top:180px;opacity:0;-webkit-transition:opacity .35s ease;transition:opacity .35s ease}
+.img-container__button a{width:200px;padding:12px 48px;text-align:center;z-index:1;font-weight:700}
 .quote{background-color:#f5f5f5}
 .quote__container{max-width:75rem;margin:0 auto;padding:2rem 1rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-family:"Raleway",sans-serif}
 @media (max-width:46.875rem){.quote__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}
@@ -701,7 +716,7 @@ nav.usa-nav{border-top:none;border-bottom:none}
 .reviews__container svg{height:100px}
 .fb-buttons{padding-bottom:2rem}
 .fb-buttons__container{max-width:75rem;margin:0 auto;padding:2rem 1rem;padding-top:0;text-align:center;height:29px}
-.fb-buttons__container iframe{height:29px;margin:0 auto;display:block;width:186px}
+.fb-buttons__container iframe{height:29px;margin:0 auto;display:block}
 .review-slider{margin:2rem 1rem;padding:10px 0;color:#5c5d5f;font-family:lato;display:inline-block;text-align:center;width:100%}
 .review-slider__container{width:90%;display:inline-block}
 .review-slider .company-info{float:left;width:17%;text-align:center}
