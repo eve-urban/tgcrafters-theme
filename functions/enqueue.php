@@ -10,12 +10,21 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 function wpb_adding_scripts() {
 
   wp_enqueue_script(
-      'vertical-tabs',
+      'slick',
+      'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js',
+      array('jquery-cdn'),
+      wp_get_theme('tgcrafters')->get('Version'),
+      true
+  );
+
+  wp_enqueue_script(
+      'main-script',
       get_stylesheet_directory_uri() . '/dist/build.js',
       array('jquery-cdn'),
       wp_get_theme('tgcrafters')->get('Version'),
       true
   );
+
 
 
   wp_enqueue_script('jquery-cdn', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);

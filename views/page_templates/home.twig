@@ -43,18 +43,7 @@
 {% include 'sections/intro.twig' %}
 {% include 'sections/reviews.twig' %}
 
-<section class="fb-buttons">
-  <div class="fb-buttons__container">
-    {% include 'sections/fb_buttons.twig' %}
-  </div>
-</section>
+{% include 'sections/review-slider.twig' %}
 
-
-
-<section class="usa-section usa-grid">
-    <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-    	{% include template_from_string(post.content) %}
-    </article>
-</section>
 {% include 'sections/contact.twig' %}
 {% endblock %}

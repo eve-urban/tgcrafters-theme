@@ -1,7 +1,15 @@
 .fb-buttons {
+    padding-bottom: $content-margin * 2;
   &__container {
     @include container();
+    padding-top: 0rem;
     text-align: center;
     height: 29px;
+    iframe {
+      height: 29px;
+      margin: 0 auto;
+      display: block;
+      width: 186px;
+    }
   }
 }

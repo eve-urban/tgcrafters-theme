@@ -471,14 +471,14 @@ li.usa-footer-primary-content:last-child, ul.usa-footer-primary-content:last-chi
 @media screen and (min-width:951px){.usa-nav-primary{display:inline}.usa-nav-primary li{border-top:none}}
 .usa-nav-primary>li{width:auto}
 @media screen and (min-width:951px){.usa-nav-primary>li{display:inline-block}.usa-nav-primary>li>a{padding:1.3rem 1.5rem 2.2rem;color:#5b616b;font-size:1.5rem;font-weight:700;line-height:1}.usa-nav-primary>li>a:hover{background-color:transparent}.usa-nav-primary a{padding-top:.75rem;padding-bottom:.75rem}}
-.usa-nav-primary button{background-color:transparent;border:0;border-radius:0;margin:0;padding:0;text-align:left;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-weight:400;line-height:1.3;padding:.85rem 1.5rem .85rem 1.8rem}
+.usa-nav-primary button{background-color:transparent;border:0;border-radius:0;margin:0;text-align:left;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-weight:400;line-height:1.3;padding:.85rem 1.5rem .85rem 1.8rem}
 @media screen and (min-width:951px){.usa-nav-primary button{padding:1.3rem 1.5rem 2.2rem;color:#5b616b;font-size:1.5rem;font-weight:700;line-height:1;width:initial}}
 .usa-nav-primary button:active, .usa-nav-primary button:focus{-webkit-box-shadow:2px dotted #aeb0b5;box-shadow:2px dotted #aeb0b5}
 .usa-nav-primary button:hover{background-color:#f1f1f1;color:#0071bc}
 @media screen and (min-width:951px){.usa-nav-primary button:hover{background-color:transparent}}
 .usa-nav-primary button[aria-expanded=false]{background-image:url(./dist/img/plus-alt.svg);background-repeat:no-repeat;background-position:right 0 center;background-size:1rem}
 @media screen and (min-width:951px){.usa-nav-primary button[aria-expanded=false]{background-image:url(./dist/img/angle-arrow-down.svg);background-position:right 1.5rem top 40%}.usa-nav-primary button[aria-expanded=false]:hover{background-image:url(./dist/img/angle-arrow-down-primary.svg)}}
-.usa-nav-primary button[aria-expanded=true]{background-image:url(./dist/img/minus-alt.svg);background-repeat:no-repeat;background-position:right 0 center;background-size:1rem}
+.usa-nav-primary button[aria-expanded=true]{background-repeat:no-repeat;background-position:right 0 center;background-size:1rem}
 @media screen and (min-width:951px){.usa-nav-primary button[aria-expanded=true]{background-color:#112e51;color:#fff;background-image:url(./dist/img/angle-arrow-down-hover.svg);background-position:right 1.5rem top 40%}.usa-nav-primary button[aria-expanded=true]:hover{background-color:#112e51}.usa-nav-primary button[aria-expanded=true] span{border-bottom:.4rem solid #0071bc;padding-bottom:.6rem;color:#fff}.usa-nav-primary .usa-current, .usa-nav-primary a.usa-current{border-left:0;padding-left:1.5rem}.usa-nav-primary .usa-current:hover span, .usa-nav-primary a.usa-current:hover span{color:#0071bc}.usa-nav-primary .usa-current span, .usa-nav-primary a.usa-current span{border-bottom:.4rem solid #0071bc;padding-bottom:.6rem;color:#212121}.usa-header-extended .usa-nav-link:hover span, .usa-header-extended .usa-nav-primary .usa-current span, .usa-header-extended .usa-nav-primary button[aria-expanded=true] span{border-bottom:.7rem solid #0071bc;padding-bottom:.9rem}}
 .usa-nav-secondary{margin-top:1.5rem}
 @media screen and (min-width:951px){.usa-nav-secondary{margin-top:0;position:absolute;right:3rem;top:-5.7rem}}
@@ -539,7 +539,7 @@ input[type=search]{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-a
 .usa-grid .usa-sidenav-list, .usa-grid aside .sidebar-widget ul, aside .sidebar-widget .usa-grid ul{margin-right:-1.5rem;margin-left:-1.5rem}
 @media screen and (min-width:600px){.usa-grid .usa-sidenav-list, .usa-grid aside .sidebar-widget ul, aside .sidebar-widget .usa-grid ul{margin-right:0;margin-left:0}}
 .usa-sidenav-sub_list{list-style-type:none;padding-left:0;margin:0;width:100%}
-.usa-sidenav-sub_list>li{margin-bottom:0}
+.review-slider .company-info .top-score .user-score p, .usa-sidenav-sub_list>li{margin-bottom:0}
 .usa-sidenav-sub_list li{border:none;font-size:1.5rem}
 .usa-sidenav-sub_list a{padding-left:2.8rem;line-height:1.3}
 .usa-sidenav-sub_list a.usa-current, .usa-sidenav-sub_list a:hover{border:none;padding-left:2.8rem}
@@ -617,12 +617,20 @@ button:not([disabled]):focus, input:not([disabled]):focus, select:not([disabled]
 .navigation__container{max-width:75rem;margin:0 auto}
 .navigation__secondary{top:-10rem}
 .navigation__secondary a{font-size:.88rem}
-.usa-nav-primary>li>a{padding:1rem;font-size:1rem}
+.usa-nav-primary>li>a{padding:1rem 1.5rem;font-size:1rem}
 .usa-menu-btn{background-color:#464647}
 nav.usa-nav{border-top:none;border-bottom:none}
 .usa-nav-link:hover span{border-bottom:.4rem solid #f4bc16;color:#5b616b}
 .usa-nav.is-visible{display:inline;width:20rem}
 .usa-navbar{border-bottom:none;position:absolute;top:0;right:0}
+.usa-nav-primary button[aria-expanded=true] span, .usa-nav-primary span, .usa-nav-primary:hover span{color:#464647}
+.usa-nav-primary button[aria-expanded=true]{background-color:#fff!important;color:#464647!important;background-image:url(./dist/img/angle-arrow-up.svg);background-position:right .4rem top 40%;background-size:11px}
+.usa-nav-primary:hover{background-color:#fff;color:#464647;border-bottom:.4rem solid #f4bc16;background-position:right .4rem top 40%;background-size:11px;border-bottom:none}
+.usa-nav-primary button{padding:0;color:#000}
+@media screen and (min-width:951px){.usa-nav-primary button[aria-expanded=false]{background-position:right .4rem top 40%;background-size:11px}}
+.usa-nav-submenu{background-color:#fff}
+.usa-nav-primary button, .usa-nav-submenu a{font-size:1rem;font-family:"Raleway",sans-serif}
+.usa-nav-submenu a, .usa-nav-submenu a:hover{background-color:#fff;color:#000}
 #slider, .slide-content, .wrap, body{margin:0;padding:0;width:100%;height:60vh}
 #slider .slide, .slide-content .slide, .wrap .slide, body .slide{background-size:cover;background-position:center;background-repeat:no-repeat}
 #slider .slide .slide-content, .slide-content .slide .slide-content, .wrap .slide .slide-content, body .slide .slide-content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
@@ -688,10 +696,37 @@ nav.usa-nav{border-top:none;border-bottom:none}
 .accordion-tabs.active:after{content:"\2212"}
 .panel{padding:0 18px;display:none;background-color:#fff;overflow:hidden}
 .reviews{background:url(img/reviews.jpg) no-repeat center center;background-size:auto;background-attachment:scroll;background-color:#f4bc16}
-.fb-buttons__container, .reviews__container{max-width:75rem;margin:0 auto;text-align:center;padding:6rem 1rem 4rem}
+.reviews__container{max-width:75rem;margin:0 auto;text-align:center;padding:6rem 1rem 2rem;padding-bottom:0!important}
 .reviews__container h5{margin-top:1rem}
 .reviews__container svg{height:100px}
-.fb-buttons__container{padding:2rem 1rem;height:29px}
+.fb-buttons{padding-bottom:2rem}
+.fb-buttons__container{max-width:75rem;margin:0 auto;padding:2rem 1rem;padding-top:0;text-align:center;height:29px}
+.fb-buttons__container iframe{height:29px;margin:0 auto;display:block;width:186px}
+.review-slider{margin:2rem 1rem;padding:10px 0;color:#5c5d5f;font-family:lato;display:inline-block;text-align:center;width:100%}
+.review-slider__container{width:90%;display:inline-block}
+.review-slider .company-info{float:left;width:17%;text-align:center}
+.review-slider .company-info .top-score{color:#375273;font-weight:900}
+.review-slider .company-info .top-score h1{display:inline-block;font-size:54px;line-height:48px;font-weight:900;margin:0}
+.review-slider .company-info .top-score .user-score{display:inline-block;text-align:left;font-size:16px;font-weight:700;line-height:18px;padding-left:5px;margin:0;height:0;width:inherit;border:none}
+.review-slider .company-info .stars{display:block;margin:5px 0;line-height:10px}
+.review-slider .company-info .stars i{font-size:15px;color:#ffc502}
+.review-slider .company-info .total-reviews{color:#7bbae6;margin-bottom:5px;font-size:16px;line-height:20px}
+.review-slider .company-info img{width:166px}
+.review-slider .slider-container{width:72%;height:150px;position:relative;float:left;margin-left:8.5%}
+.review-slider .slider-container .slider-reviews .single-review-box{float:left;text-align:left;padding-right:20px}
+.review-slider .slider-container .slider-reviews .single-review-box .user-info{display:table;padding-bottom:15px}
+.review-slider .slider-container .slider-reviews .single-review-box .user-info .user-rating{display:table-cell;vertical-align:middle;background-color:#375273;text-align:center;padding:0 4px;color:#fff;font-size:21px}
+.review-slider .slider-container .slider-reviews .single-review-box .user-info .user-location{display:table-cell;padding-left:12px}
+.review-slider .slider-container .slider-reviews .single-review-box .user-info .user-location p{font-size:16px;font-weight:900;line-height:16px;margin-bottom:5px}
+.review-slider .slider-container .slider-reviews .single-review-box .user-info .user-location p:last-child{font-weight:400;font-size:14px;margin-bottom:0}
+.review-slider .slider-container .slider-reviews .single-review-box .review-content{line-height:19px;font-size:16px}
+.slick-list{display:block;overflow:hidden;margin:0;padding:0}
+.slick-prev{position:absolute;top:35%;z-index:100;font-size:30px;border:none;padding:0;margin:0;cursor:pointer;background:0 0;left:-7%}
+.slick-next img, .slick-prev img{width:50%}
+.slick-next:focus, .slick-prev:focus{outline:none}
+.slick-next{position:absolute;top:35%;z-index:100;font-size:30px;border:none;padding:0;margin:0;cursor:pointer;background:0 0;right:-5%}
+.slick-prev.slick-disabled{opacity:0;cursor:pointer;display:none}
+.slick-next.slick-disabled{opacity:0;cursor:pointer}
 .footer{font-family:"Raleway",sans-serif;background-color:#f5f5f5}
 .footer__container{max-width:75rem;margin:0 auto;padding:2rem 1rem}
 .footer__container h4{font-size:1rem;font-family:"Raleway",sans-serif;font-weight:400}

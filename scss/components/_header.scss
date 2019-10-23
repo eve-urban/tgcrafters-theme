@@ -88,7 +88,7 @@
 .usa-nav-primary>li>a {
   color: $color-black;
   font-family: $font-releway;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   font-size: $base-font-size;
 }
 
@@ -119,4 +119,63 @@ nav.usa-nav {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+
+.usa-nav-primary {
+  span {
+    color: $grey-company;
+  }
+  button[aria-expanded=true] {
+    background-color: $color-white !important;
+    color: $grey-company !important;
+    background-image: url('./dist/img/angle-arrow-up.svg');
+    background-position: right 0.4rem top 40%;
+    background-size: 11px;
+
+    span {
+      color: $grey-company;
+    }
+  }
+  &:hover {
+    background-color: $color-white;
+    color: $grey-company;
+    border-bottom: .4rem solid $gold-company;
+    background-position: right 0.4rem top 40%;
+    background-size: 11px;
+    border-bottom: none;
+    span {
+      color: $grey-company;
+    }
+  }
+  button {
+    padding: 0;
+    font-size: $base-font-size;
+    font-family: $font-releway;
+    color: $color-black;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  .usa-nav-primary button[aria-expanded=false] {
+    background-position: right 0.4rem top 40%;
+    background-size: 11px;
+  }
+}
+
+
+
+
+.usa-nav-submenu {
+  background-color: $color-white;
+  a {
+    color: $color-black;
+    font-size: $base-font-size;
+    font-family: $font-releway;
+    background-color: $color-white;
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
 }

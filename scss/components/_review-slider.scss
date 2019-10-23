@@ -1,0 +1,163 @@
+.review-slider {
+      margin: $content-margin * 2 $content-margin;
+
+			padding: 10px 0;
+			color: #5C5D5F;
+      font-family: lato;
+			display: inline-block;
+			text-align: center;
+			width: 100%;
+      &__container {
+        width: 90%;
+        display: inline-block;
+      }
+			.company-info {
+				float: left;
+				width: 17%;
+				text-align: center;
+				.top-score {
+					color: #375273;
+					font-weight: 900;
+					h1 {
+						display: inline-block;
+						font-size: 54px;
+						line-height: 48px;
+						font-weight: 900;
+						margin: 0;
+					}
+					.user-score {
+						display: inline-block;
+						text-align: left;
+						font-size: 16px;
+						font-weight: bold;
+						line-height: 18px;
+						padding-left: 5px;
+						margin: 0;
+						height: 0;
+						width: inherit;
+						border: none;
+
+						p {
+							margin-bottom: 0px;
+						}
+					}
+				}
+				.stars {
+					display: block;
+					margin: 5px 0;
+					line-height: 10px;
+					i {
+						font-size: 15px;
+						color: #FFC502;
+					}
+				}
+				.total-reviews {
+					color: #7BBAE6;
+					margin-bottom: 5px;
+					font-size: 16px;
+					line-height: 20px;
+				}
+				img {
+					width: 166px;
+				}
+			}
+			.slider-container {
+				width: 72%;
+				height: 150px;
+				position: relative;
+				float: left;
+				margin-left: 8.5%;
+				.slider-reviews {
+					.single-review-box {
+						float: left;
+						text-align: left;
+						padding-right: 20px;
+						.user-info {
+							display: table;
+							padding-bottom: 15px;
+							.user-rating {
+								display: table-cell;
+								vertical-align: middle;
+								background-color: #375273;
+								text-align: center;
+								padding: 0 4px;
+								color: white;
+								font-size: 21px;
+							}
+							.user-location {
+								display: table-cell;
+								padding-left: 12px;
+								p {
+									font-size: 16px;
+									font-weight: 900;
+									line-height: 16px;
+									margin-bottom: 5px;
+									&:last-child {
+										font-weight: normal;
+										font-size: 14px;
+										// padding-top: 5px;
+										margin-bottom: 0px;
+									}
+								}
+							}
+						}
+						.review-content {
+							line-height: 19px;
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+.slick-list {
+	overflow: hidden;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.slick-prev {
+	position: absolute;
+	top: 35%;
+	z-index: 100;
+	font-size: 30px;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	background: transparent;
+	left: -7%;
+	img {
+		width: 50%;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.slick-next {
+	position: absolute;
+	top: 35%;
+	z-index: 100;
+	font-size: 30px;
+	border: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	background: transparent;
+	right: -5%;
+	img {
+		width: 50%;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.slick-prev.slick-disabled {
+	opacity: 0;
+	cursor: pointer;
+	display: none;
+}
+.slick-next.slick-disabled {
+	opacity: 0;
+	cursor: pointer;
+}

@@ -7,7 +7,7 @@
     @include container();
     text-align: center;
     padding-top: $content-margin * 6;
-    padding-bottom: $content-margin * 4;
+    padding-bottom: 0px !important;
     h5 {
       margin-top: $content-margin;
     }
