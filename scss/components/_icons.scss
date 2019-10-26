@@ -22,5 +22,8 @@
   &--header-mail,
   &--header-mail {
     fill: $color-gray;
+    @include mq(medium--max) {
+      height: 3rem;
+    }
   }
 }

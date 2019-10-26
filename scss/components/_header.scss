@@ -2,6 +2,9 @@
   height: 40px;
   background-color: $color-gray-lightest;
   color: $color-gray;
+  @include mq(two-column--max) {
+    height: 56px;
+  }
   &__container {
     max-width: $container-width;
     margin: 0 auto;
@@ -9,6 +12,14 @@
     font-size: $small-font-size;
     font-family: $font-lato;
     position: relative;
+    @include mq(two-column--max) {
+      padding: $content-margin;
+    }
+    @include mq(small--max-nav) {
+      padding: 0.55rem 1rem;
+    }
+
+
   }
   a {
     color: $color-gray;
@@ -41,10 +52,17 @@
     @include mq(medium--max) {
       flex-direction: column;
     }
+    @include mq(two-column--max) {
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
     &--boxone {
       padding-right: $content-margin * 2;
       display: flex;
       align-items: center;
+      @include mq(two-column--max) {
+        padding-right: $content-margin;
+      }
       a {
         border: 1px solid $gold-company !important;
         padding: 3px;
@@ -53,6 +71,9 @@
     &--boxtwo {
       display: flex;
       align-items: center;
+      @include mq(two-column--max) {
+        padding-right: $content-margin;
+      }
     }
     span {
       font-size: $base-font-size;
@@ -81,7 +102,7 @@
     margin: 0 auto;
   }
   &__secondary {
-      top: -10rem;
+      top: -11.4rem;
     a {
       font-size: $small-font-size;
     }
@@ -95,9 +116,6 @@
   font-size: $base-font-size;
 }
 
-.usa-menu-btn {
-  background-color: $grey-company;
-}
 
 nav.usa-nav {
   //border-top: 1px solid $color-border;
@@ -181,4 +199,12 @@ nav.usa-nav {
       color: $color-black;
     }
   }
+}
+
+
+.usa-menu-btn {
+  background-color: $grey-company;
+  height: 3.5rem;
+  width: 5rem;
+  line-height: 0;
 }

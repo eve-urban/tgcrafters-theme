@@ -29,19 +29,17 @@
     width: 30%;
     @include mq( medium--max-services) {
       width: 50%;
-      padding: 0 $content-margin;
     }
     @include mq(medium--max) {
       width: 100%;
-      padding-left: $content-margin;
-      padding-right: $content-margin;
-
     }
     h4 {
       margin-top: $content-margin;
       font-size: $medium-font-size;
       background-color: $bg-transparent-black;
-
+      @include mq(small--max-nav) {
+        width: 280px;
+      }
     }
     @include mq(medium--max) {
       margin-bottom: $content-margin * 2;
@@ -81,11 +79,19 @@
   position: relative;
   width: 350px;
   height: 250px;
+  @include mq(small--max-nav) {
+    width: 280px;
+    height: 200px;
+  }
   img {
     position: absolute;
     width: 350px;
     height: 250px;
     left: 0;
+    @include mq(small--max-nav) {
+      width: 280px;
+      height: 200px;
+    }
   }
   &__overlay {
     position: absolute;

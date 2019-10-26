@@ -5,3 +5,16 @@
 .is-shown {
   display: block
 }
+
+
+.show-mb {
+  @include mq(small--max-nav) {
+    display: block;
+  }
+}
+
+.hide-mb {
+  @include mq(small--max-nav) {
+    display: none !important;
+  }
+}

@@ -8,6 +8,9 @@ $weight--bold: 400;
 $weight--black: 700;
 
 
+body {
+  min-width: 420px;
+}
 html {
   font-size: $base-font;
 }
