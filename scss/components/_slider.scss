@@ -43,6 +43,9 @@ body,
   border-color: transparent #fff transparent transparent;
   left: 0;
   margin-left: 30px;
+  @include mq(medium--max-services) {
+    margin-left: 10px;
+  }
 }
 
 #arrow-right {
@@ -50,6 +53,9 @@ body,
   border-color: transparent transparent transparent #fff;
   right: 0;
   margin-right: 30px;
+  @include mq(medium--max-services) {
+    margin-right: 10px;
+  }
 }
 
 .slider {

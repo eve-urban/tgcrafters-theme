@@ -19,7 +19,7 @@
 .header {
   &__container {
     max-width: $container-width--large;
-    height: $header-hight;
+    min-height: $header-hight;
   }
   &__logo {
     line-height: 0;
@@ -32,12 +32,15 @@
     font-size: $small-font-size;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: end;
     align-content: center;
     line-height: 1.6;
     font-family: $font-raleway;
-    height: $header-hight;
+    min-height: $header-hight;
     color: $color-gray;
+    @include mq(medium--max) {
+      flex-direction: column;
+    }
     &--boxone {
       padding-right: $content-margin * 2;
       display: flex;

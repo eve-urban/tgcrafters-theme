@@ -1,5 +1,5 @@
 .review-slider {
-      margin: $content-margin * 2 $content-margin;
+      margin: $content-margin * 2 0;
 
 			padding: 10px 0;
 			color: #5C5D5F;
@@ -7,14 +7,25 @@
 			display: inline-block;
 			text-align: center;
 			width: 100%;
+      @include mq(medium--max) {
+        margin-left: 0;
+      }
       &__container {
         width: 90%;
         display: inline-block;
+        @include mq(medium--max) {
+          height: auto;
+            width: 85%;
+        }
       }
 			.company-info {
 				float: left;
 				width: 17%;
 				text-align: center;
+        @include mq(medium--max) {
+          width: 100%;
+
+        }
 				.top-score {
 					color: #375273;
 					font-weight: 900;
@@ -67,6 +78,13 @@
 				position: relative;
 				float: left;
 				margin-left: 8.5%;
+        @include mq(medium--max) {
+          width: 95%;
+          height: auto;
+          margin-top: $content-margin * 2;
+          margin-bottom: $content-margin * 2;
+          margin-left: 0;
+        }
 				.slider-reviews {
 					.single-review-box {
 						float: left;
@@ -126,7 +144,7 @@
 	margin: 0;
 	cursor: pointer;
 	background: transparent;
-	left: -7%;
+	left: -10%;
 	img {
 		width: 50%;
 	}
@@ -144,7 +162,7 @@
 	margin: 0;
 	cursor: pointer;
 	background: transparent;
-	right: -5%;
+	right: -10%;
 	img {
 		width: 50%;
 	}

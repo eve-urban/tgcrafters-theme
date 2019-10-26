@@ -1,0 +1,12 @@
+.page-header {
+  &__container {
+    @include container();
+  }
+}
+
+
+.page {
+  &__container {
+    @include container();
+  }
+}
