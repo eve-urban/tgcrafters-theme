@@ -11,3 +11,25 @@
   height: 2px;
   background-color: $gold-company;
 }
+
+@mixin text_shadow() {
+  text-shadow: 0 0 1rem $color-black;
+}
+
+@mixin link_white() {
+  a {
+    color: $color-white;
+  }
+  a:visited {
+    color: $color-white;
+  }
+}
+
+@mixin link_black() {
+  a {
+    color: $color-black;
+  }
+  a:visited {
+    color: $color-black;
+  }
+}

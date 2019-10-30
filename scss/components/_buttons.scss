@@ -11,6 +11,7 @@
   &:hover {
     background-color: $gold-company;
     color: $color-white !important;
-    transition: background-color 0.5s;
+    transition: background-color 0.3s;
+    border: 3px solid $gold-company;
   }
 }

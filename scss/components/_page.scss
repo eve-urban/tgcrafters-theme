@@ -1,4 +1,16 @@
 .page-header {
+  background-size: cover;
+  background-position: 50%;
+  text-align: center;
+  h1 {
+    color: $color-white;
+    @include text_shadow();
+    margin: $content-margin * 4;
+    @include mq(medium--max) {
+      font-size: $largest-font-size;
+      margin: $content-margin * 3 $content-margin * 2;
+    }
+  }
   &__container {
     @include container();
   }
@@ -8,5 +20,57 @@
 .page {
   &__container {
     @include container();
+    display: flex;
+    @include mq(medium--max) {
+      flex-direction: column;
+    }
+  }
+  &__intro {
+    font-size: $medium-font-size;
+    line-height: 1.3;
+  }
+  &__section {
+    &--main {
+      width: 70%;
+      border-right: 1px solid $color-gray-lightest;
+      padding-right: $content-margin;
+      @include mq(medium--max) {
+        border: none;
+        padding-right: 0;
+      }
+    }
+    &--second {
+      width: 30%;
+      padding-left: $content-margin;
+      @include mq(medium--max) {
+        padding-left: 0;
+      }
+      .fb-div {
+        background-color: $color-fb;
+        color: $color-white;
+        text-align: center;
+        padding: $content-margin * 2 $content-margin;
+        font-size: $medium-font-size;
+        @include link_white();
+
+      }
+      .call {
+        text-align: center;
+        margin-bottom: $content-margin * 2;
+        border-bottom: 1px dotted $color-gray-lightest;
+        p {
+          font-size: $medium-font-size;
+          @include link_black();
+        }
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    h2 {
+      font-size: $large-font-size;
+      margin: 0;
+    }
   }
 }

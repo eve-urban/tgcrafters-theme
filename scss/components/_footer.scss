@@ -18,12 +18,15 @@
     &--bottom {
       display: flex;
       @include mq(medium--max) {
-        flex-direction: column;
+        flex-flow: row wrap;
       }
     }
     &__item {
       width: 25%;
       @include mq(medium--max) {
+        width: 50%;
+      }
+      @include mq(small--max) {
         width: 100%;
       }
       padding: $content-margin  ($content-margin * 2)  $content-margin 0;

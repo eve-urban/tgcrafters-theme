@@ -1,0 +1,23 @@
+.contact-short {
+  background-color: $gold-company;
+  &__container {
+    @include container();
+    padding: $content-margin;
+    color: $color-white;
+    @include text_shadow();
+  }
+  &__nav {
+    margin: 0;
+    padding: 0;
+    height: 1.5rem;
+    li {
+      list-style: none;
+      display: inline-block;
+      a {
+        color: $color-white;
+        text-decoration: none;
+        padding-right: $content-margin * 2;
+      }
+    }
+  }
+}

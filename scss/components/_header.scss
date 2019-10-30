@@ -51,8 +51,6 @@
     color: $color-gray;
     @include mq(medium--max) {
       flex-direction: column;
-    }
-    @include mq(two-column--max) {
       justify-content: flex-start;
       align-items: flex-end;
     }

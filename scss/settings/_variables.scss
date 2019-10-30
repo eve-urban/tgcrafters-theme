@@ -15,6 +15,7 @@ $base-font-size:      1rem !default;
 $small-font-size:     0.88rem !default;
 $medium-font-size:    1.5rem;
 $large-font-size:     2rem;
+$largest-font-size:   2.5rem;
 $lead-font-size:      2rem !default;
 $title-font-size:     5.2rem !default;
 $h1-font-size:        4rem !default;
@@ -61,6 +62,7 @@ $color-gray-light:           #aeb0b5 !default; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #d6d7d9 !default; // lighten($color-gray-dark, 80%)
 $color-gray-lightest:        #f1f1f1 !default; // lighten($color-gray-dark, 91%)
 $color-border:               rgba(43,47,52,.1);
+$color-fb:                   #3b5998;
 // Branding colours
 $grey-company:               #464647;
 $gold-company:               #f4bc16;

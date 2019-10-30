@@ -19,6 +19,13 @@ body, h1, h2, h3, h4, h5, p, a {
 }
 a {
   text-decoration: none;
+  outline: none !important;
+  &:active,
+  &:hover,
+  &:visited,
+  &:focus {
+    outline: none !important;
+  }
 }
 
 
