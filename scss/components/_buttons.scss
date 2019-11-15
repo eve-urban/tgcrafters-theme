@@ -1,17 +1,18 @@
-.golden-btn {
-  background-color: transparent;
-  border-radius: 0;
-  border: 3px solid $gold-company;
-  color: $gold-company;
-  padding: 0.7rem 2rem;
-  height: auto;
+.golden-btn,
+input[type="button"] {
+  background-color: transparent !important;;
+  border-radius: 0 !important;
+  border: 3px solid $gold-company !important;
+  color: $gold-company !important;
+  padding: 0.7rem 2rem !important;
+  height: auto !important;
   @include mq(medium--max) {
     width: 100%;
   }
   &:hover {
-    background-color: $gold-company;
+    background-color: $gold-company !important;
     color: $color-white !important;
-    transition: background-color 0.3s;
-    border: 3px solid $gold-company;
+    transition: background-color 0.3s !important;
+    border: 3px solid $gold-company !important;
   }
 }

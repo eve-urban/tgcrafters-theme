@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<section class="page-header" style='background-image: url("{{hero_img.url}}");'>
+
+  <div class="page-header__container">
+    <h1>{{page.post_title}}</h1>
+  </div>
+
+</section>
+
+<section class="page page--contact-form" style='background-image: url("{{contact_form_img.url}}");'>
+  <div class="page__container">
+    <div class="page__section page__section--main">
+      {{ fn("do_shortcode", page.post_content) }}
+    </div>
+    <div class="page__section--second">
+      <!--second-->
+    </div>
+  </div>
+</section>
+{% include 'sections/reviews.twig' %}
+
+{% endblock %}

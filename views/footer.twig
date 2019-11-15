@@ -1,4 +1,5 @@
 <footer class="usa-footer usa-footer-medium footer" role="contentinfo">
+
 	<div class="footer__container">
 		<div class="footer__container--top">
 			<div class="footer__container__item">
@@ -8,14 +9,18 @@
 					</a>
 			 	</div>
 			</div>
-			<div class="footer__container__item">
-				logo
+
+			<div class="footer__container__item footer__container__item--half">
+				{{options.footer_quote}}
+
 			</div>
 			<div class="footer__container__item">
-				Our portfolio
-			</div>
-			<div class="footer__container__item">
-				<a href="#main-header">Return to top</a>
+				<a href="#main-header">
+					<svg class="icon icon--scroll-up" role="presentation">
+            <use xlink:href="#icon-up-chevron-button"></use>
+          </svg>
+
+				</a>
 			</div>
 
 
@@ -24,33 +29,54 @@
 		<div class="footer__container--bottom">
 			<div class="footer__container__item">
 				<h4>ABOUT</h4>
-<p>Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, vitae est.<br/> Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel, rutrum eu ipsum.</a>
+<p>
+	{{ options.about_us_footer}}
+
+</p>
 			</div>
 			<div class="footer__container__item">
-				<h4>SERVICES<h4>
+				<h4>{{options.menu_header}}</h4>
 
 				<ul>
-					<li><a href="">GENERAL BUILDER &#10140;</a></li>
-					<li>HOUSE EXTENSIONS &#10140;</li>
-					<li>REFURBISHMENT &#10140;</li>
-					<li>ELECTRICITY &#10140;</li>
-					<li>BATHROOMS &#10140;</li>
-					<li>KITCHENS &#10140;</li>
-
+					{% for item in footer_menu.get_items %}
+					<li>
+						<a href="{{item.get_link}}">{{item.title}} &#8250;</a>
+					</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="footer__container__item">
 				<h4>CONTACT</h4>
 
 				<p>
-					Mobile: 02 562-95<br/>
-				E-mail: hello@construction.com<br/>
-				Facebook<br/>
+				<a class="contact-details" href="tel:07511407624">
+					<svg class="icon icon--footer-tel" role="presentation">
+            <use xlink:href="#icon-smartphone"></use>
+          </svg> <span>07511407624</span>
+				</a>
+			<br/>
+
+				<a class="contact-details" href="mailto:contact@tgcrafters.co.uk">
+					<svg class="icon icon--footer-email" role="presentation">
+						<use xlink:href="#icon-mail"></use>
+					</svg> <span>contact@tgcrafters.co.uk</span>
+				</a>
+				<br/>
+
+				<a class="contact-details" href="https://www.facebook.com/timberandglasscrafters/">
+					<svg class="icon icon--footer-fb" role="presentation">
+	          <use xlink:href="#icon-facebook-2"></use>
+	        </svg><span>Join us</span>
+				</a>
+				<br/>
 			</p>
 			</div>
-			<div class="footer__container__item">
-				<h4>GET A FREE QUOTE</h4>
-				<p>Form</p>
+			<div class="footer__container__item form--dark">
+				<h4>{{options.quick_quote_form_header}}</h4>
+				<p>
+					{{options.quick_quote_form|print_r}}
+
+				</p>
 			</div>
 		</div>
 	</div>

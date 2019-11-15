@@ -206,3 +206,16 @@ nav.usa-nav {
   width: 5rem;
   line-height: 0;
 }
+
+.usa-nav.is-visible {
+  .usa-nav-link {
+    padding-left: 0 !important;
+  }
+  button {
+    padding-bottom:15px;
+    background-position: right 4px;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

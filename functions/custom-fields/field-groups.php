@@ -63,3 +63,194 @@ acf_add_local_field_group([
 	'active' => true,
 	'description' => '',
 ]);
+
+
+acf_add_local_field_group([
+	'key' => 'general_services_field_group',
+	'title' => 'General Services Fields',
+	'fields' => [
+
+		 [
+			'key' => 'key_banner_hero_image',
+			'label' => 'Banner hero image',
+			'name' => 'banner_hero_image',
+			'type' => 'image',
+			'instructions' => '',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+		],
+
+		[
+			'key' => 'key_h1_heading',
+			'label' => 'H1 heading',
+			'name' => 'h1_heading',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+		],
+
+		[
+			'key' => 'key_intro_paragraph',
+			'label' => 'Intro paragraph',
+			'name' => 'intro_paragraph',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+
+		],
+		[
+			'key' => 'key_main_text',
+			'label' => 'Main text',
+			'name' => 'main_text',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+
+		 ],
+		 [
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		],
+	],
+	'location' => [
+		[
+			[
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-services-general.php',
+			],
+		],
+	],
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+]);
+
+
+acf_add_local_field_group([
+	'key' => 'contact_template_field_group',
+	'title' => 'Contact Fields',
+	'fields' => [
+
+		 [
+			'key' => 'key_contact_banner_hero_image',
+			'label' => 'Banner hero image',
+			'name' => 'contact_banner_hero_image',
+			'type' => 'image',
+			'instructions' => '',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+		],
+		[
+		 'key' => 'key_contact_form_bg',
+		 'label' => 'Contact form bg',
+		 'name' => 'contact_form_bg',
+		 'type' => 'image',
+		 'instructions' => '',
+		 'return_format' => 'array',
+		 'preview_size' => 'medium',
+	 ],
+
+
+		[
+			'key' => 'key_contact_intro_paragraph',
+			'label' => 'Intro paragraph',
+			'name' => 'contact_intro_paragraph',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+
+		],
+		 [
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		],
+	],
+	'location' => [
+		[
+			[
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-contact.php',
+			],
+		],
+	],
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+]);
+
+
+acf_add_local_field_group([
+	'key' => 'quote_template_field_group',
+	'title' => 'Contact Fields',
+	'fields' => [
+
+		 [
+			'key' => 'key_quote_banner_hero_image',
+			'label' => 'Banner hero image',
+			'name' => 'quote_banner_hero_image',
+			'type' => 'image',
+			'instructions' => '',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+		],
+		[
+		 'key' => 'key_quote_form_bg',
+		 'label' => 'Quote form bg',
+		 'name' => 'quote_form_bg',
+		 'type' => 'image',
+		 'instructions' => '',
+		 'return_format' => 'array',
+		 'preview_size' => 'medium',
+	 ],
+
+
+		[
+			'key' => 'key_quote_intro_paragraph',
+			'label' => 'Intro paragraph',
+			'name' => 'quote_intro_paragraph',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+
+		],
+		 [
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 1,
+			'delay' => 0,
+		],
+	],
+	'location' => [
+		[
+			[
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-quote.php',
+			],
+		],
+	],
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+]);

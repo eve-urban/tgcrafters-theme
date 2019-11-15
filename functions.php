@@ -9,6 +9,8 @@ include 'functions/enable-svg.php';
 //Load custom fields
 
 require_once('functions/custom-fields/options/logo.php');
+require_once('functions/custom-fields/options/footer.php');
+
 require_once('functions/custom-fields/field-groups.php') ;
 
 // Check for Timber
@@ -60,6 +62,7 @@ class BootsmoothSite extends TimberSite {
 	function add_to_context( $context ) {
 		$context['menu'] = new TimberMenu('primary');
 		$context['secondary_menu'] = new TimberMenu('secondary');
+		$context['footer_menu'] = new TimberMenu('footer');
 		$context['site'] = $this;
 		$context['sidebar_widgets'] = Timber::get_widgets( 'Sidebar' );
 		$context['banner_widgets'] = Timber::get_widgets( 'Banner' );
@@ -123,7 +126,8 @@ function register_theme_features() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary Menu' ),
-			'secondary' => __( 'Secondary Menu' )
+			'secondary' => __( 'Secondary Menu' ),
+			'footer' => __( 'Foorter Menu' )
 		)
 	);
 }

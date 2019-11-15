@@ -7,6 +7,10 @@
       font-size: $base-font-size;
       font-family: $font-releway;
       font-weight: $font-normal;
+      &:after {
+        @include heading_underline()
+        width: 40px;
+      }
     }
     p {
       font-size: $small-font-size;
@@ -14,6 +18,7 @@
     &--top {
       display: flex;
       border-bottom: 1px solid $color-gray-light;
+      align-items: center;
     }
     &--bottom {
       display: flex;
@@ -23,13 +28,32 @@
     }
     &__item {
       width: 25%;
+      padding: $content-margin  ($content-margin * 2)  $content-margin 0;
+      &:nth-child(3) {
+        width: 20%;
+        @include mq(medium--max) {
+          width: 50%;
+        }
+        @include mq(small--max) {
+          width: 100%;
+        }
+      }
+      &:nth-child(4) {
+        width: 30%;
+        @include mq(medium--max) {
+          width: 50%;
+        }
+        @include mq(small--max) {
+          width: 100%;
+        }
+      }
       @include mq(medium--max) {
         width: 50%;
       }
       @include mq(small--max) {
         width: 100%;
       }
-      padding: $content-margin  ($content-margin * 2)  $content-margin 0;
+
       ul {
         list-style-type: none;
         margin-left: 0;
@@ -37,7 +61,43 @@
         li {
           a {
             color: $color-black;
+            background-color: $gold-company;
+            padding: 3px;
+            &:hover {
+              color: $grey-company;
+              text-decoration: underline;
+            }
           }
+        }
+      }
+
+      .contact-details {
+
+          color: $color-black;
+          &:hover {
+            color: $grey-company;
+            fill: $grey-company;
+          }
+          span {
+            position: relative;
+            bottom: 20px;
+            left: 8px;
+          }
+          svg {
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: $content-margin / 2;
+          }
+
+      }
+      &--half {
+        width: 50%;
+        font-size: 1.5rem;
+        font-weight: $font-bold;
+        font-style: italic;
+        color: $grey-company;
+        @include mq(small--max) {
+          width: 100%;
         }
       }
     }
@@ -52,6 +112,7 @@
       text-align: center;
       color: $color-gray-lighter;
       font-size: $small-font-size;
+      padding: $content-margin;
 
       a {
         color: $color-gray-lighter;
@@ -59,4 +120,8 @@
       }
     }
   }
+}
+
+.nf-form-content label {
+  font-size: $small-font-size !important;
 }

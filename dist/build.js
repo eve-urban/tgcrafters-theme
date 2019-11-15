@@ -77,6 +77,8 @@ function sliderInit() {
   function reset() {
     for (var i = 0; i < sliderImages.length; i++) {
       sliderImages[i].style.display = "none";
+      sliderImages[i].classList.remove("active-slide");
+      sliderImages[i].classList.add("inactive-slide");
     }
   }
 
@@ -84,12 +86,17 @@ function sliderInit() {
   function startSlide() {
     reset();
     sliderImages[0].style.display = "block";
+    sliderImages[0].classList.add("active-slide");
+    sliderImages[0].classList.remove("inactive-slide");
   }
 
   // Show prev
   function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = "block";
+    sliderImages[current - 1].classList.add("active-slide");
+    sliderImages[current - 1].classList.remove("inactive-slide");
+
     current--;
   }
 
@@ -97,6 +104,9 @@ function sliderInit() {
   function slideRight() {
     reset();
     sliderImages[current + 1].style.display = "block";
+    sliderImages[current + 1].classList.add("active-slide");
+    sliderImages[current + 1].classList.remove("inactive-slide");
+
     current++;
   }
 
@@ -117,6 +127,13 @@ function sliderInit() {
   });
 
   startSlide();
+
+  setInterval(function () {
+    if (current === sliderImages.length - 1) {
+      current = -1;
+    }
+    slideRight();
+  }, 5000);
 }
 
 exports.default = sliderInit;

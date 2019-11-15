@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: General service 
+ * Template Name: General service
  * @package  WordPress
  * @subpackage  Timber
  * @since    Timber 0.1
@@ -8,7 +8,8 @@
 
 $context = Timber::get_context();
 $post = new TimberPost();
-$context['post'] = $post;
+$context['page'] = $post;
+$context['hero_img'] = get_field('banner_hero_image');
 
 /*
 // Enqueue vertical tabs.

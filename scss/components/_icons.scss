@@ -34,4 +34,14 @@
     margin: 0 auto $content-margin;
 
   }
+  &--scroll-up {
+    height: 3rem;
+    width: 3rem;
+    fill: $grey-company;
+    float: right;
+    &:hover {
+      fill: $color-gray-light;
+    }
+  }
+
 }

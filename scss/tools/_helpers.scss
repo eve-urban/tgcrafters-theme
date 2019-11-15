@@ -22,3 +22,13 @@
 .bold {
   font-weight: $font-bold;
 }
+
+.alignright {
+  float: right;
+  padding-left: $content-margin;
+  padding-bottom: $content-margin;
+}
+
+.ytp-title-text {
+  display: none;
+}

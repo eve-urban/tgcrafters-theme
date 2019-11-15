@@ -1,0 +1,30 @@
+.nf-form-fields-required {
+  padding-bottom: $content-margin * 2
+}
+
+.nf-error .ninja-forms-field {
+  border-color: #f7c51e !important;
+}
+.nf-error.field-wrap .nf-field-element:after {
+  background: #f7c51e !important;
+}
+.nf-error .nf-error-msg,
+.nf-error-msg, .ninja-forms-req-symbol {
+  color: #f7c51e !important;
+}
+
+
+.form {
+  &--dark {
+    .nf-error .nf-error-msg,
+    .nf-error .nf-error-msg, .nf-error-msg, .ninja-forms-req-symbol {
+      color: red !important;
+    }
+    .nf-form-content button,
+    .nf-form-content input[type=button],
+    .nf-form-content input[type=submit] {
+    color: $grey-company !important;
+    border: 2px solid $grey-company !important;
+   }
+  }
+}

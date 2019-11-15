@@ -26,8 +26,8 @@
     }
   }
   &__intro {
-    font-size: $medium-font-size;
-    line-height: 1.3;
+    font-size: $medium--small-font-size;
+    line-height: 1.4;
   }
   &__section {
     &--main {
@@ -37,6 +37,7 @@
       @include mq(medium--max) {
         border: none;
         padding-right: 0;
+        width: 100%;
       }
     }
     &--second {
@@ -44,6 +45,7 @@
       padding-left: $content-margin;
       @include mq(medium--max) {
         padding-left: 0;
+        width: 100%;
       }
       .fb-div {
         background-color: $color-fb;
@@ -72,5 +74,30 @@
       font-size: $large-font-size;
       margin: 0;
     }
+  }
+  &--contact-form {
+    background-size: cover;
+    background-position: 50%;
+    color: $color-white;
+    textarea,
+    input {
+      background: transparent !important;
+      color: $color-gray-lightest !important;
+      &:focus {
+        background: rgba(160, 206, 76, .1) !important;
+        border-color: #f7c51e !important;
+      }
+    }
+    .nf-error .ninja-forms-field {
+      border-color: #f7c51e !important;
+    }
+    .nf-error.field-wrap .nf-field-element:after {
+      background: #f7c51e !important;
+    }
+    .nf-error .nf-error-msg,
+    .nf-error-msg, .ninja-forms-req-symbol {
+      color: #f7c51e !important;
+    }
+
   }
 }
