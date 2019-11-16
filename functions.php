@@ -7,7 +7,7 @@ include 'functions/enable-svg.php';
 
 
 //Load custom fields
-
+require_once('functions/custom-fields/options/general.php');
 require_once('functions/custom-fields/options/logo.php');
 require_once('functions/custom-fields/options/footer.php');
 
