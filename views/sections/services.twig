@@ -1,3 +1,5 @@
+
+
 <section class="services">
   <div class="services__container">
     <h3>Our key services</h3>
@@ -6,151 +8,21 @@
     </p>
     <div class="services__box">
 
-      <div class="services__item">
+      {% for item in options.service %}
+        <div class="services__item">
 
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/condensation-window-glass-350.png" alt="" />
+          <div class="img-container">
+            <a class="img-container__link" href="{{item.service_link_page.url}}">
+              <img src="{{item.service_image.url}}" alt="" />
 
-            <h4 class="img-container__title">Misted windows repairs</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
+              <h4 class="img-container__title">{{item.service_header}}</h4>
+              <div class="img-container__overlay"></div>
+            </a>
+            <div class="img-container__button"><a class="golden-btn" href="{{item.service_link_page.url}}"> Find out more </a></div>
+          </div>
+          <p>{{item.service_text}}</p>
         </div>
-        <p>Are you experiencing <strong>condensation between your double glazed windows</strong>? Have you wondered how much the look of your home could be enhanced, if you had the glass replaced? Finally, wouldn’t you prefer...
- <a href="img-container__link">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/broken-glass-repair-350.png" alt="" />
-
-            <h4 class="img-container__title">Broken glass replacements</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
-        </div>
-        <p>Have your window or <strong>glass been broken</strong>? Are you looking to <strong>replace broken glass</strong>? Check our our broken <strong>glass replacement services</strong>. Sort out your broken glass with us...
- <a class="img-container__link" href="">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/emergency-boarding-up-service-nottingham-350.png" alt="" />
-
-            <h4 class="img-container__title">Emergency boarding up</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
-        </div>
-        <p>We offer a highly responsive <strong>emergency boarding up service in Nottingham</strong>. We are here for you when you need us the most and when your property needs securing...
- <a class="img-container__link" href="">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/shop-front-glass-replacement-nottingham-350.png" alt="" />
-
-            <h4 class="img-container__title">Commercial glazing</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
-        </div>
-        <p> We have the knowledge and expertise to undertake all aspects of commerical glazing. Whether you need a new <strong>glass shop front</strong> or <strong>bespoke mirrors</strong> for your gym or salon, contact us today for a free quote...
- <a href="img-container__link">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/window-repair-nottingham-350.png" alt="" />
-
-            <h4 class="img-container__title">Window and door repairs</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
-        </div>
-        <p>When it comes to window and door, they require proper maintenance and care to operate properly. We undetake all of <strong>window and door repairs including broken handles, hindges, misalignments</strong> and so on...
- <a href="img-container__link">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/double-glazing-single-glazing-glazier-nottingham.jpg" alt="" />
-
-            <h4 class="img-container__title">Double and single glazing</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#"> Find out more </a></div>
-        </div>
-        <p>We are experts on <strong>double and single glazing installations and repairs</strong>. We work on a variety of different types of frames and systems and ensure your job is completed to highest industry standards...
- <a class="img-container__link" href="img-container__link">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/bespoke-glass-balustrades.png" alt="" />
-
-            <h4 class="img-container__title">Balustrades and mirrors</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#">Find out more</a></div>
-        </div>
-        <p>We are able to create unique <strong>bespoke balustrades or mirrors</strong> to meet the needs of your home or business. Get in touch to find out how much we could enhance the look of your property with our custom products...
- <a class="img-container__link" href="">read more</a></p>
-
-      </div>
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/handyman-services-nottingham.jpg" alt="" />
-
-            <h4 class="img-container__title">Handyman</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#">Find out more</a></div>
-        </div>
-        <p>Whether it is <strong>general property maintenance</strong>, odd jobs, <strong>urgent leaks to repair and many others</strong>, get in touch with our skilled team of handymen to see how we could assist you...
- <a class="img-container__link" href="">read more</a></p>
-
-      </div>
-
-      <div class="services__item">
-
-        <div class="img-container">
-          <a class="img-container__link" href="#">
-            <img src="/wp-content/themes/tgcrafters-theme/img/bespoke-lean-to-roof-nottingham-carpenter.png" alt="" />
-
-            <h4 class="img-container__title">Bespoke timber structures</h4>
-            <div class="img-container__overlay"></div>
-          </a>
-          <div class="img-container__button"><a class="golden-btn" href="#">Find out more</a></div>
-        </div>
-        <p>Need a design for your <strong>timber gazebo, garage or lean to roof</strong>? We build bespoke timber structures that not only will add additional space to your property but also will increase its value significantly...
- <a href="img-container__link">read more</a></p>
-
-      </div>
-
-
-
+      {% endfor %}
 
     </div>
   </div>
