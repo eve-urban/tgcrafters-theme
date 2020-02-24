@@ -72,13 +72,19 @@ function sliderInit() {
       arrowLeft = document.querySelector("#arrow-left"),
       arrowRight = document.querySelector("#arrow-right"),
       current = 0;
-
+  var sliderOneBg = document.querySelector("#slide1");
+  var sliderTwoBg = document.querySelector("#slide2");
+  var sliderThreeBg = document.querySelector("#slide3");
+  var url = "url(" + sliderOneBg.dataset.bg + ")";
+  console.log(url);
+  console.log(sliderOneBg.dataset.bg);
   // Clear all images
   function reset() {
     for (var i = 0; i < sliderImages.length; i++) {
       sliderImages[i].style.display = "none";
       sliderImages[i].classList.remove("active-slide");
       sliderImages[i].classList.add("inactive-slide");
+      //console.log(sliderImages[i]);
     }
   }
 
@@ -88,6 +94,7 @@ function sliderInit() {
     sliderImages[0].style.display = "block";
     sliderImages[0].classList.add("active-slide");
     sliderImages[0].classList.remove("inactive-slide");
+    sliderImages[0].style.backgroundImage = "url(" + sliderOneBg.dataset.bg + ")";
   }
 
   // Show prev
@@ -97,6 +104,13 @@ function sliderInit() {
     sliderImages[current - 1].classList.add("active-slide");
     sliderImages[current - 1].classList.remove("inactive-slide");
 
+    if (sliderImages[current - 1].classList.contains('slide1')) {
+      sliderImages[current - 1].style.backgroundImage = "url(" + sliderOneBg.dataset.bg + ")";
+    } else if (sliderImages[current - 1].classList.contains('slide2')) {
+      sliderImages[current - 1].style.backgroundImage = "url(" + sliderTwoBg.dataset.bg + ")";
+    } else if (sliderImages[current - 1].classList.contains('slide3')) {
+      sliderImages[current - 1].style.backgroundImage = "url(" + sliderThreeBg.dataset.bg + ")";
+    }
     current--;
   }
 
@@ -107,6 +121,13 @@ function sliderInit() {
     sliderImages[current + 1].classList.add("active-slide");
     sliderImages[current + 1].classList.remove("inactive-slide");
 
+    if (sliderImages[current + 1].classList.contains('slide1')) {
+      sliderImages[current + 1].style.backgroundImage = "url(" + sliderOneBg.dataset.bg + ")";
+    } else if (sliderImages[current + 1].classList.contains('slide2')) {
+      sliderImages[current + 1].style.backgroundImage = "url(" + sliderTwoBg.dataset.bg + ")";
+    } else if (sliderImages[current + 1].classList.contains('slide3')) {
+      sliderImages[current + 1].style.backgroundImage = "url(" + sliderThreeBg.dataset.bg + ")";
+    }
     current++;
   }
 
@@ -133,7 +154,7 @@ function sliderInit() {
       current = -1;
     }
     slideRight();
-  }, 5000);
+  }, 10000);
 }
 
 exports.default = sliderInit;

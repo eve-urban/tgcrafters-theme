@@ -1,78 +1,88 @@
 {% extends "base.twig" %}
 {% block content %}
-<section>
+  <section>
 
-  <div class="wrap">
-  <div id="arrow-left" class="arrow"></div>
-  <div id="slider" class="slider">
-    <div class="slide slide1" style="background-image: url('/wp-content/themes/tgcrafters-theme/img/condensation-window-double-glazing-repair-nottingham.jpg')">
-      <div class="slider__container">
+    <div class="wrap">
+      <div id="arrow-left" class="arrow"></div>
+      <div id="slider" class="slider">
+        <div class="slide slide1" id="slide1" data-bg="/wp-content/themes/tgcrafters-theme/img/condensation-window-double-glazing-repair-nottingham.jpg">
+          <div class="slider__container">
 
-        <div class="slider__box">
+            <div class="slider__box">
 
-          <div class="slider__box__heading">
-            <h1>Misted Windows Repairs</h1>
+              <div class="slider__box__heading">
+                <h1>Misted Windows Repairs</h1>
+              </div>
+              <div class="slider__box__content">
+                <p>Experiencing condensation between your double glazed windows glass? We can easily replace the window glass for your that has misted up.
+                  <br/><br/>
+                  Get in touch to get a FREE quote.</p><br/>
+                <a href="">
+                  <button>Find out more</button>
+                </a>
+
+              </div>
+            </div>
+
           </div>
-          <div class="slider__box__content">
-          <p>Experiencing condensation between your double glazed windows glass? We can easily replace the window glass for your that has misted up. <br /><br /> Get in touch to get a FREE quote.</p><br/>
-<a href=""><button>Find out more</button></a>
+        </div>
+
+        <div class="slide slide2" id="slide2" data-bg="/wp-content/themes/tgcrafters-theme/img/broken-glass-window-replacement-nottingham.jpg">
+          <div class="slider__container">
+
+            <div class="slider__box">
+
+              <div class="slider__box__heading">
+                <h1>Broken glass replacements</h1>
+              </div>
+              <div class="slider__box__content">
+                <p>Have your window or door glass been damaged? Has your house been broken into? Are you looking to replace broken glass?<br/><br/>
+                  Get in touch to get a FREE quote.</p><br/>
+                <a href="">
+                  <button>Find out more</button>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="slide slide3" id="slide3" data-bg="/wp-content/themes/tgcrafters-theme/img/boarding-up-glass-nottingham.png">
+          <div class="slider__container">
+
+            <div class="slider__box">
+
+              <div class="slider__box__heading">
+                <h1>Emergency boarding up</h1>
+              </div>
+              <div class="slider__box__content">
+                <p>Effective emergency boarding up services in Nottingham. Have you suffered from a break-in? Are you looking to secure your property?
+                  <br/><br/>
+                  Get in touch to get a FREE quote.</p><br/>
+                <a href="">
+                  <button>Find out more</button>
+                </a>
+
+              </div>
+            </div>
 
           </div>
         </div>
 
       </div>
+      <div id="arrow-right" class="arrow"></div>
     </div>
 
-    <div class="slide slide2" style="background-image: url('/wp-content/themes/tgcrafters-theme/img/broken-glass-window-replacement-nottingham.jpg')">
-      <div class="slider__container">
+  </section>
+  {% include 'sections/contact-short.twig' %}
 
-        <div class="slider__box">
+  {% include 'sections/services.twig' %}
+  {% include 'sections/quote.twig' %}
+  {% include 'sections/intro.twig' %}
+  {% include 'sections/reviews.twig' %}
 
-          <div class="slider__box__heading">
-            <h1>Broken glass replacements</h1>
-          </div>
-          <div class="slider__box__content">
-          <p>Have your window or door glass been damaged? Has your house been broken into? Are you looking to replace broken glass?<br/><br/> Get in touch to get a FREE quote.</p><br/>
-<a href=""><button>Find out more</button></a>
+  {% include 'sections/review-slider.twig' %}
 
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="slide slide3" style="background-image: url('/wp-content/themes/tgcrafters-theme/img/boarding-up-glass-nottingham.png')">
-      <div class="slider__container">
-
-        <div class="slider__box">
-
-          <div class="slider__box__heading">
-            <h1>Emergency boarding up</h1>
-          </div>
-          <div class="slider__box__content">
-          <p>Effective emergency boarding up services in Nottingham. Have you suffered from a break-in? Are you looking to secure your property? <br /><br /> Get in touch to get a FREE quote.</p><br/>
-<a href=""><button>Find out more</button></a>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-  </div>
-  <div id="arrow-right" class="arrow"></div>
-</div>
-
-</section>
-{% include 'sections/contact-short.twig' %}
-
-{% include 'sections/services.twig' %}
-{% include 'sections/quote.twig' %}
-{% include 'sections/intro.twig' %}
-{% include 'sections/reviews.twig' %}
-
-{% include 'sections/review-slider.twig' %}
-
-{% include 'sections/contact.twig' %}
+  {% include 'sections/contact.twig' %}
 {% endblock %}
