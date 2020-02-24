@@ -19,7 +19,7 @@ function wpb_adding_scripts() {
 
   wp_enqueue_script(
       'main-script',
-      get_stylesheet_directory_uri() . '/dist/build.js',
+      get_stylesheet_directory_uri() . '/dist/build-min/build-min.js',
       array('jquery-cdn'),
       wp_get_theme('tgcrafters')->get('Version'),
       true

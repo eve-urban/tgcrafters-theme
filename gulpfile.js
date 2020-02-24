@@ -9,6 +9,11 @@ var gulp   = require('gulp'),
     browserify = require("browserify"),
     postcss    = require('gulp-postcss'),
     source = require("vinyl-source-stream");
+    const buffer = require("vinyl-buffer");
+    const uglify = require("gulp-uglify");
+    const minify = require('gulp-minify');
+
+
 
 //SVG
     // Require package and theme information, set some variables.
@@ -36,6 +41,9 @@ gulp.task('css', function () {
 });
 
 // Javascript  task
+
+
+
 gulp.task('js', function() {
    return browserify({
         entries: ["./js/scripts.js"]
@@ -44,10 +52,21 @@ gulp.task('js', function() {
         presets : ["es2015"]
     }))
     .bundle()
+    //
     .pipe(source("build.js"))
+    //.pipe(buffer())
+    //.pipe(uglify())
     .pipe(gulp.dest("./dist"))
   ;
 });
+
+gulp.task('compress', function() {
+  gulp.src(['dist/build.js'])
+    .pipe(minify())
+    .pipe(gulp.dest('dist/build-min'))
+});
+
+
 
 // Watch tasks
 gulp.task('watch', ['build'], function() {
@@ -72,7 +91,6 @@ gulp.task('icons', () => {
       .pipe(rename({prefix: 'icon-'}))
       .pipe(svgstore())
       .pipe(gulp.dest('./icons/'));
-
   return merge(task);
 });
 

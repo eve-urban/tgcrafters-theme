@@ -16,13 +16,16 @@
     "gulp-babel": "^6.1.2",
     "gulp-connect": "^5.0.0",
     "gulp-csso": "^2.0.0",
+    "gulp-minify": "^3.1.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-svgo": "1.1.1",
     "gulp-svgstore": "6.1.0",
+    "gulp-uglify": "^3.0.2",
     "merge-stream": "^1.0.1",
     "precss": "^2.0.0",
+    "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
