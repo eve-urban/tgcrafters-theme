@@ -44,6 +44,24 @@ acf_add_local_field_group([
 				],
 			],
 		],
+		[
+			'key' => 'services_heading_home',
+			'label' => 'Services heading',
+			'name' => 'services_heading_home',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+		],
+		[
+			'key' => 'services_intro_home',
+			'label' => 'Services intro',
+			'name' => 'services_intro_home',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+		],
 	],
 	'location' => [
 		[

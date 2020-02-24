@@ -2,9 +2,9 @@
 
 <section class="services">
   <div class="services__container">
-    <h3>Our key services</h3>
-    <p class="services__intro">With over 10 years experience and real focus on customer satisfaction, you can rely on us to carry out your project,
-    and solve all of your glazing needs. We provide professional glazing services for both domestic and commercial customers.
+    <h3>{{ post.services_heading_home}}</h3>
+    <p class="services__intro">
+      {{ post.services_intro_home}}
     </p>
     <div class="services__box">
 
@@ -13,7 +13,7 @@
 
           <div class="img-container">
             <a class="img-container__link" href="{{item.service_link_page.url}}">
-              <img src="{{item.service_image.url}}" alt="" />
+              <img src="{{item.service_image.sizes.post_services}}" alt="" />
 
               <h4 class="img-container__title">{{item.service_header}}</h4>
               <div class="img-container__overlay"></div>

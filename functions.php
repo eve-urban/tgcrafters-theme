@@ -4,6 +4,8 @@ include 'functions/enqueue.php';
 include 'functions/add_options_page.php';
 include 'theme_options.php';
 include 'functions/enable-svg.php';
+include 'functions/custom-image-sizes.php';
+
 
 
 //Load custom fields

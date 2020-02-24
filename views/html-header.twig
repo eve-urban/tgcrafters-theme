@@ -18,11 +18,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:url" content="{{fn('get_permalink')}}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Glass, Glazing & Bespoke timber building services">
-    <meta property="og:description" content="Welcome to our world where possibilites are limitless. We are a team of skilled tradesmen that can take your property to another level or design and implement solutions to help you create your dream home or business.">
-    <meta property="og:image" content="{{options.header_logo_image.url}}">
+    <meta property="og:title" content="{% if page %}{{page.post_title}}{% else %}Glass, Glazing & Bespoke timber building services {% endif %}">
+    <meta property="og:description" content="{% if page %}{{page.intro_paragraph|striptags|raw}}{% else %}Welcome to our world where possibilites are limitless. We are a team of skilled tradesmen that can take your property to another level or design and implement solutions to help you create your dream home or business.{% endif %}">
+        <meta property="og:image" content="
+    {% if hero_img %}{{hero_img.url}}{% else %}{{options.header_logo_image.url}}{% endif %}">
+    <meta name="google-site-verification" content="115y9nIQYMWutuwsluhsPoHWXK4AjOaZ1ZAhj-7OYck" />
     <link rel="pingback" href="{{site.pingback_url}}" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Global site tag (gtag.js) - Google Analytics -->
