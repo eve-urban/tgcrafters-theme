@@ -12,6 +12,8 @@ var gulp   = require('gulp'),
     const buffer = require("vinyl-buffer");
     const uglify = require("gulp-uglify");
     const minify = require('gulp-minify');
+    let cleanCSS = require('gulp-clean-css');
+
 
 
 
@@ -36,7 +38,10 @@ gulp.task('css', function () {
     .pipe(sass().on('error', sass.logError))
 	.pipe(csso())
 	.pipe( postcss([ require('precss'), require('autoprefixer') ]) )
+
     .pipe(rename('style.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+
     .pipe(gulp.dest('./'));
 });
 
