@@ -54,6 +54,7 @@
         padding: $content-margin * 2 $content-margin;
         font-size: $medium-font-size;
         @include link_white();
+        margin: $content-margin * 2 0;
 
       }
       .call {
@@ -63,10 +64,14 @@
         p {
           font-size: $medium-font-size;
           @include link_black();
+          a {
+            color: $color-white;
+          }
         }
         h3 {
           margin: 0;
           padding: 0;
+          color: $color-white;
         }
       }
     }
@@ -99,5 +104,19 @@
       color: #f7c51e !important;
     }
 
+  }
+  &__blog-item {
+    a {
+      display: inline-block;
+      margin: $content-margin * 2 0;
+      color: $color-gray;
+      img {
+        float: left;
+        margin-right: $content-margin * 2;
+      }
+      h2 {
+        display: inline-block;
+      }
+    }
   }
 }

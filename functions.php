@@ -5,6 +5,8 @@ include 'functions/add_options_page.php';
 include 'theme_options.php';
 include 'functions/enable-svg.php';
 include 'functions/custom-image-sizes.php';
+include 'functions/pagination.php';
+
 
 
 
@@ -65,6 +67,7 @@ class BootsmoothSite extends TimberSite {
 		$context['menu'] = new TimberMenu('primary');
 		$context['secondary_menu'] = new TimberMenu('secondary');
 		$context['footer_menu'] = new TimberMenu('footer');
+		$context['category'] = new TimberMenu('category');
 		$context['site'] = $this;
 		$context['sidebar_widgets'] = Timber::get_widgets( 'Sidebar' );
 		$context['banner_widgets'] = Timber::get_widgets( 'Banner' );
@@ -129,7 +132,8 @@ function register_theme_features() {
 		array(
 			'primary' => __( 'Primary Menu' ),
 			'secondary' => __( 'Secondary Menu' ),
-			'footer' => __( 'Foorter Menu' )
+			'footer' => __( 'Foorter Menu' ),
+			'category' => __('Categories menu')
 		)
 	);
 }

@@ -272,3 +272,42 @@ acf_add_local_field_group([
 	'active' => true,
 	'description' => '',
 ]);
+
+
+
+
+acf_add_local_field_group([
+	'key' => 'post_field_group',
+	'title' => 'Post fields',
+	'fields' => [
+
+		 [
+			'key' => 'key_post_image_thumbnail',
+			'label' => 'Post image thumbnail',
+			'name' => 'post_image_thumbnail',
+			'type' => 'image',
+			'instructions' => '',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+		],
+
+
+	],
+	'location' => [
+		[
+			[
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			],
+		],
+	],
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+]);

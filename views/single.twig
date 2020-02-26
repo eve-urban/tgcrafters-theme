@@ -1,14 +1,54 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<div class="usa-grid usa-section">
-<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-    <h1>{{post.title}}</h1>
-    <p class="usa-heading-alt">{{post.date | date}}</p>
-	{{post.content}}
-</article>
-<aside>
-{% include 'sidebar.twig' %}
-</aside>
-</div>
+
+<header class="post-header">
+  {#This is not ideal, but IE11 has no support for srcset or object-fit, and Edge is patchy.#}
+  {#Also, the image comes form the post, so can't be in the CSS as `attr` only works on `content`.#}
+
+{#
+  <style scoped>
+    .post-header__background {
+      {% if (person.get_field('cover_image')) %}
+        background-image: url({{ person.get_field('cover_image').url | proxied_image([500,'']) }});
+      {% else %}
+        background-image: url({{ person.get_field('profile_photo').sizes.thumbnail }});
+      {% endif %}
+    }
+    {% if (person.get_field('cover_image')) %}
+      @media screen and (min-width: 500px) {
+        .post-header__background {
+          background-image: url();
+        }
+      }
+      @media screen and (min-width: 750px) {
+        .post-header__background {
+          background-image: url();
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .post-header__background {
+          background-image: url();
+        }
+      }
+      @media screen and (min-width: 1500px) {
+        .post-header__background {
+          background-image: url();
+        }
+      }
+    {% endif %}
+
+
+  </style>#}
+  <div class="post-header__background {{ person.get_field('cover_image') ? '' : ' post-header__background--blur' }}"></div>
+  <h1 class="post-header__title">{{post.title}}</h1>
+
+</header>
+<section class="post">
+  <div class="post__container">
+    {{post.content}}
+  </div>
+</section>
+
 {% endblock %}

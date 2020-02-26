@@ -1,0 +1,60 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<section class="page-header" style='background-image: url("{{hero_img.url}}");'>
+
+  <div class="page-header__container">
+    <h1>{{page.post_title}}</h1>
+  </div>
+
+</section>
+{% include 'sections/contact-short.twig' %}
+
+
+<section class="page">
+  <div class="page__container">
+    <div class="page__section page__section--main">
+
+      <div class="page__blog-list">
+
+
+      {% for post in recent_posts %}
+        {% set metadata = function('get_fields', post.ID) %}
+        {% set post_url = function('get_permalink', post.ID) %}
+
+        <div class="page__blog-item">
+          <a href="{{post_url}}">
+            <img src="{{metadata.post_image_thumbnail.sizes.thumbnail}}" />
+            <h2>{{post.post_title}}</h2>
+            <p>
+              {{post.post_content|excerpt(40)}}
+            </p>
+          </a>
+        </div>
+      {% endfor %}
+
+      </div>
+
+      {% include 'components/pagination.twig' %}
+
+
+    </div>
+
+
+
+
+    <div class="page__section--second">
+
+      {% for item in category.get_items %}
+      <li>
+        <a href="{{item.get_link}}">{{item.title}}</a>
+      </li>
+      {% endfor %}
+
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

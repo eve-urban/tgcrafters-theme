@@ -1,0 +1,20 @@
+.pagination {
+  text-align: center;
+  &__pages {
+    display: inline-block;
+    li {
+      display: inline-block;
+      line-height: 1;
+    }
+    a {
+      display: inline-block;
+    }
+    .page-number {
+      border: 1px solid $color-gray-light;
+      padding: $content-margin / 3;
+    }
+    .current {
+      background-color: $gold-company;
+    }
+  }
+}
