@@ -1,0 +1,10 @@
+.category {
+  &__menu {
+    padding-left: 0;
+    li {
+      list-style: none;
+      background-color: $gold-company;
+      padding: $content-margin / 2 $content-margin;
+    }
+  }
+}

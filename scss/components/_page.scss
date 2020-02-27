@@ -2,6 +2,8 @@
   background-size: cover;
   background-position: 50%;
   text-align: center;
+  background-color: $color-gray;
+
   h1 {
     color: $color-white;
     @include text_shadow();
@@ -109,7 +111,7 @@
     a {
       display: inline-block;
       margin: $content-margin * 2 0;
-      color: $color-gray;
+      color: $color-base;
       img {
         float: left;
         margin-right: $content-margin * 2;

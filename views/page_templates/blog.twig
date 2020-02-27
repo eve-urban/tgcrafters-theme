@@ -6,7 +6,6 @@
   <div class="page-header__container">
     <h1>{{page.post_title}}</h1>
   </div>
-
 </section>
 {% include 'sections/contact-short.twig' %}
 
@@ -37,19 +36,22 @@
 
       {% include 'components/pagination.twig' %}
 
-
     </div>
-
-
 
 
     <div class="page__section--second">
 
-      {% for item in category.get_items %}
-      <li>
-        <a href="{{item.get_link}}">{{item.title}}</a>
-      </li>
-      {% endfor %}
+      {# Check if category menu is set up, if not don't display it at all #}
+      {% if category %}
+      <ul class="category__menu">
+
+        {% for item in category.get_items %}
+          <li>
+            <a href="{{item.get_link}}">{{item.title}} &#187;</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
 
 
     </div>
