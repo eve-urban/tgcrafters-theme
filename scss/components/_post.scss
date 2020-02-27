@@ -17,6 +17,10 @@
     font-size: $largest-font-size;
     line-height: 1.5em;
     margin: 0;
+    @include mq(medium--max) {
+      font-size: 1.8rem;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -30,5 +34,6 @@
   }
   &--blog {
     display: block;
+    padding-top: 0;
   }
 }

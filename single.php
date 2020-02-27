@@ -12,5 +12,6 @@
 $context = Timber::get_context();
 $post = Timber::query_post();
 $context['post'] = $post;
+$context['hero_img'] = get_fields($post->ID);
 
 Timber::render('single.twig', $context);

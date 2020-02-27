@@ -6,43 +6,26 @@
   {#This is not ideal, but IE11 has no support for srcset or object-fit, and Edge is patchy.#}
   {#Also, the image comes form the post, so can't be in the CSS as `attr` only works on `content`.#}
 
-{#
   <style scoped>
-    .post-header__background {
-      {% if (person.get_field('cover_image')) %}
-        background-image: url({{ person.get_field('cover_image').url | proxied_image([500,'']) }});
-      {% else %}
-        background-image: url({{ person.get_field('profile_photo').sizes.thumbnail }});
-      {% endif %}
-    }
-    {% if (person.get_field('cover_image')) %}
-      @media screen and (min-width: 500px) {
-        .post-header__background {
-          background-image: url();
-        }
+
+    {% if (hero_img.hero_image_cover.sizes) %}
+
+      .post-header {
+        background-image: url('{{hero_img.hero_image_cover.sizes.large}}');
       }
+
       @media screen and (min-width: 750px) {
-        .post-header__background {
-          background-image: url();
+        .post-header {
+          background-image: url('{{hero_img.hero_image_cover.url}}');
         }
       }
 
-      @media screen and (min-width: 1000px) {
-        .post-header__background {
-          background-image: url();
-        }
-      }
-      @media screen and (min-width: 1500px) {
-        .post-header__background {
-          background-image: url();
-        }
-      }
     {% endif %}
 
 
-  </style>#}
-  <div class="post-header__background {{ person.get_field('cover_image') ? '' : ' post-header__background--blur' }}"></div>
-  <h1 class="post-header__title">{{post.title}}</h1>
+  </style>
+
+<h1 class="post-header__title">{{post.title}}</h1>
 
 </header>
 <section class="post">

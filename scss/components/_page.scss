@@ -115,9 +115,11 @@
       img {
         float: left;
         margin-right: $content-margin * 2;
+        width: 20%;
       }
       h2 {
-        display: inline-block;
+        display: inline;
+        width: 75%;
       }
     }
   }

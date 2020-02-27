@@ -280,7 +280,15 @@ acf_add_local_field_group([
 	'key' => 'post_field_group',
 	'title' => 'Post fields',
 	'fields' => [
-
+			[
+			'key' => 'key_hero_image_cover',
+			'label' => 'Hero image cover',
+			'name' => 'hero_image_cover',
+			'type' => 'image',
+			'instructions' => '',
+			'return_format' => 'array',
+			'preview_size' => 'medium',
+		 ],
 		 [
 			'key' => 'key_post_image_thumbnail',
 			'label' => 'Post image thumbnail',
@@ -290,6 +298,7 @@ acf_add_local_field_group([
 			'return_format' => 'array',
 			'preview_size' => 'medium',
 		],
+
 
 
 	],

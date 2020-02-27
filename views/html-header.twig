@@ -20,10 +20,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url" content="{{fn('get_permalink')}}">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{% if page %}{{page.post_title}}{% else %}Glass, Glazing & Bespoke timber building services {% endif %}">
-    <meta property="og:description" content="{% if page %}{{page.intro_paragraph|striptags|raw}}{% else %}Welcome to our world where possibilites are limitless. We are a team of skilled tradesmen that can take your property to another level or design and implement solutions to help you create your dream home or business.{% endif %}">
+    <meta property="og:title" content="{% if page %}{{page.post_title}}{% elseif post %}{{post.post_title}}{% else %}Glass, Glazing & Bespoke timber building services {% endif %}">
+    <meta property="og:description" content="{% if page %}{{page.intro_paragraph|striptags|raw}}{% elseif post %}{{post.content | excerpt(30)}}{% else %}Welcome to our world where possibilites are limitless. We are a team of skilled tradesmen that can take your property to another level or design and implement solutions to help you create your dream home or business.{% endif %}">
         <meta property="og:image" content="
-    {% if hero_img %}{{hero_img.url}}{% else %}{{options.header_logo_image.url}}{% endif %}">
+    {% if hero_img %}{{hero_img.post_image_thumbnail.url }}{% else %}{{options.header_logo_image.url}}{% endif %}">
+
     <meta name="google-site-verification" content="115y9nIQYMWutuwsluhsPoHWXK4AjOaZ1ZAhj-7OYck" />
     <link rel="pingback" href="{{site.pingback_url}}" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
