@@ -16,3 +16,8 @@ input[type="button"] {
     border: 3px solid $gold-company !important;
   }
 }
+
+.golden-btn--main-page {
+  background-color: $gold-company !important;
+  color: $color-white !important;
+}

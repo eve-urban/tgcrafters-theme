@@ -13,14 +13,18 @@
 
           <div class="img-container">
             <a class="img-container__link" href="{{item.service_link_page.url}}">
-              <img src="{{item.service_image.sizes.post_services}}" alt="" />
+              <img src="{{item.service_image.sizes.large}}" alt="" />
 
               <h4 class="img-container__title">{{item.service_header}}</h4>
               <div class="img-container__overlay"></div>
             </a>
-            <div class="img-container__button"><a class="golden-btn" href="{{item.service_link_page.url}}"> Find out more </a></div>
+            <div class="img-container__button">
+              <a class="golden-btn golden-btn--main-page" href="{{item.service_link_page.url}}"> Find out more </a>
+            </div>
           </div>
-          <p>{{item.service_text}}</p>
+          {% if item.service_text %}
+            {{item.service_text}}
+          {% endif %}
         </div>
       {% endfor %}
 

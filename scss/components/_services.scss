@@ -123,8 +123,9 @@
     left:0;
     bottom: 35px;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity .35s ease;
+    color: $color-white;
     a {
       width: 200px;
       padding: 12px 48px;

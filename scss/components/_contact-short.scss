@@ -3,19 +3,20 @@
   &__container {
     @include container();
     padding: $content-margin;
-    color: $color-white;
-    @include text_shadow();
+    color: $grey-company;
+    text-align: center;
+    font-weight: bold;
   }
   &__nav {
     margin: 0;
     padding: 0;
     height: 1.5rem;
-    display: inline-block;  
+    display: inline-block;
     li {
       list-style: none;
       display: inline-block;
       a {
-        color: $color-white;
+        color: $grey-company;
         text-decoration: none;
         padding-right: $content-margin * 2;
       }
