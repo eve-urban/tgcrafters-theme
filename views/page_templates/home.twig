@@ -27,80 +27,52 @@
     }
 
   </style>
-    <div class="wrap">
-      <div id="slider" class="slider">
-        <div class="slide slide1" id="slide1" data-bg="">
-          <div class="slider__container">
+  <div class="container-slider">
+<div class="slider">
+  <input type="radio" name="slideSelectors" id="sl1" class="selectors" checked>
+  <div class="slide1 slides">
+    <div class="content">
 
-            <div class="slider__box">
-
-              <div class="slider__box__heading">
-                <h1>Bespoke timber peroglas</h1>
-              </div>
-              <div class="slider__box__content">
-                <p><strong>Bespoke timber pergolas</strong> crafted and installed at the site by our highly skilled team to fit your space perfectly.
-                  <br/><br/>
-                  Get in touch to get a FREE quote.</p><br/>
-                <a title="Learn more about bespoke timber peroglas" href="https://tgcrafters.co.uk/get-a-free-quote/">
-                  <button>GET A QUOTE</button>
-                </a>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="slide slide2" id="slide2" data-bg="">
-          <div class="slider__container">
-
-            <div class="slider__box">
-
-              <div class="slider__box__heading">
-                <h1>Timber carports</h1>
-              </div>
-              <div class="slider__box__content">
-                <p>
-                  Protect one of your most valuable progressions with our bespoke timber carport. We provide a completely hassle-free supply&installation service.
-                  <br/><br/>
-                  Get in touch to get a FREE quote.</p><br/>
-                <a title="Bespoke timber carports" href="https://tgcrafters.co.uk/timber-carports/">
-                  <button>Find out more</button>
-                </a>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="slide slide3" id="slide3" data-bg="/wp-content/themes/tgcrafters-theme/img/broken-glass-window-replacement-nottingham.jpg">
-          <div class="slider__container">
-
-            <div class="slider__box">
-
-              <div class="slider__box__heading">
-                <h1>Decking installation</h1>
-              </div>
-              <div class="slider__box__content">
-                <p>
-                  It has never been a better time to get your patio decked. Bundle deals available for both decking and pergola installations!
-                </p><br/>
-                <a title="Find out about decking installations" href="https://tgcrafters.co.uk/decking-supply-installation/">
-                  <button>Find out more</button>
-                </a>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-      <div id="arrow-left" class="arrow"></div>
-
-      <div id="arrow-right" class="arrow"></div>
+      <h1>Bespoke timber peroglas</h1>
+      <p><strong>Bespoke timber pergolas</strong> crafted and installed at the site by our highly skilled team to fit your space perfectly.
+          <br/><br/></p>
+      <button class="btns">Find out more</button>
     </div>
+    <label for="sl3" class="prev"></label>
+    <label for="sl2" class="next"></label>
+  </div>
+  <input type="radio" name="slideSelectors" id="sl2" class="selectors">
+  <div class="slide2 slides">
+    <div class="content">
 
+      <h1>Timber carports</h1>
+      <p>Protect one of your most valuable progressions with our bespoke timber carport. We provide a completely hassle-free supply&installation service.</p>
+      <button class="btns">Explore</button>
+    </div>
+    <label for="sl1" class="prev"></label>
+    <label for="sl3" class="next"></label>
+  </div>
+  <input type="radio" name="slideSelectors" id="sl3" class="selectors">
+  <div class="slide3 slides">
+    <div class="content">
+      <h1>Decking installation</h1>
+      <p>It has never been a better time to get your patio decked. Bundle deals available for both decking and pergola installations!</p>
+      <button class="btns">Explore</button>
+    </div>
+    <label for="sl2" class="prev"></label>
+    <label for="sl1" class="next"></label>
+  </div>
+  <input type="radio" name="slideSelectors" id="sl4" class="selectors">
+
+  <input type="radio" name="slideSelectors" id="sl5" class="selectors">
+
+  <div class="nav">
+    <label for="sl1" class="dots dot1"></label>
+    <label for="sl2" class="dots dot2"></label>
+    <label for="sl3" class="dots dot3"></label>
+  </div>
+</div>
+</div>
   </section>
   {% include 'sections/contact-short.twig' %}
 
