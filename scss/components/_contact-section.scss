@@ -2,7 +2,8 @@
   background-color: $gold-company;
   &__container {
     @include container();
-    color: $color-white;
+    color: $color-black;
+    font-weight: bold;
     display: flex;
     padding-top: $content-margin * 2;
     padding-bottom: $content-margin * 2;
@@ -13,7 +14,7 @@
       flex-direction: column;
     }
     a {
-      color: $color-white;
+      color: $color-black;
       text-decoration: none;
     }
   }

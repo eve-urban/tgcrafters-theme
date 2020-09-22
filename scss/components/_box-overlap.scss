@@ -1,0 +1,54 @@
+.box-overlap {
+  &__container {
+    @include container();
+    background-color: $gold-company;
+    color: $color-black;
+    padding: 20px;
+    margin-top: -20px;
+    z-index: 999;
+    max-width: 60rem;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -215px;
+    @include mq(two-column--max) {
+      position: relative;
+      bottom: 0;
+    }
+  }
+  &__boxes {
+    display: flex;
+    @include mq(two-column--max) {
+      flex-direction: column;
+    }
+    h2 {
+      font-size: 1rem;
+      margin-top: 0;
+    }
+    .box {
+      width: 20rem;
+      padding-right: $content-margin;
+      padding-left: $content-margin;
+      border-right: 1px solid $color-black;
+      @include mq(two-column--max) {
+        border-right: none;
+        width: 100%;
+        border-bottom: 1px solid $color-black;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

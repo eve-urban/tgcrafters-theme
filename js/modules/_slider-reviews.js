@@ -1,13 +1,14 @@
-function sliderReview() {
+
+ function sliderReview() {
   $('.slider-reviews').slick({
     infinite: false,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     prevArrow: '<span class="slick-prev"><img src="https://images.bestcompany.com/left-slider-arrow@2x.png"></span>',
     nextArrow:'<span class="slick-next"><img src="https://images.bestcompany.com/right-slider-arrow@2x.png"></span>',
     speed: 700
   });
-
+/*
   shortenReview()
 
   	function shortenReview () {
@@ -26,6 +27,7 @@ function sliderReview() {
   		})
 
   	}
+    */
 }
 
 export default sliderReview;

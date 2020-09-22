@@ -11,7 +11,7 @@ input[type="button"] {
   }
   &:hover {
     background-color: $gold-company !important;
-    color: $color-white !important;
+    color: $color-black !important;
     transition: background-color 0.3s !important;
     border: 3px solid $gold-company !important;
   }
@@ -19,5 +19,5 @@ input[type="button"] {
 
 .golden-btn--main-page {
   background-color: $gold-company !important;
-  color: $color-white !important;
+  color: $color-black !important;
 }

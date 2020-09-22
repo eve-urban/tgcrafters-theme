@@ -26,12 +26,16 @@
   box-sizing: border-box;
   outline: none;
 }
+
+.section-slider {
+  position: relative;
+}
 body {
   width: 100%;
   overflow-x: hidden;
   .container-slider {
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     min-width: 360px;
     min-height: 480px;
     margin: auto;
@@ -185,7 +189,7 @@ body {
       }
       .nav {
         position: absolute;
-        bottom: 3%;
+        bottom: 10%;
         width: 100%;
         text-align: center;
         display: flex;
