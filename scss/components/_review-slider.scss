@@ -74,22 +74,21 @@
 			}
 			.slider-container {
 				width: 72%;
+        max-width: 530px;
 				position: relative;
 				float: left;
 				margin-left: 8.5%;
         @include mq(medium--max) {
           width: 95%;
           height: auto;
-          margin-top: $content-margin * 2;
-          margin-bottom: $content-margin * 2;
+          margin-top: $content-margin * 4;
           margin-left: 0;
         }
 				.slider-reviews {
 					.single-review-box {
 						float: left;
 						text-align: left;
-						padding-right: 20px;
-            
+				
 						.user-info {
 							display: table;
 							padding-bottom: 15px;
@@ -135,6 +134,14 @@
 	padding: 0;
 }
 .slick-prev {
+  @include mq(medium--max) {
+    top: -8%;
+    left: 0;
+    display: block;
+    background-color: $gold-company;
+    width: 100px;
+    height: 50px;
+  }
 	position: absolute;
 	top: 35%;
 	z-index: 100;
@@ -147,12 +154,27 @@
 	left: -10%;
 	img {
 		width: 50%;
+    @include mq(medium--max) {
+      width: 20px;
+      right: 32px;
+      top: 7px;
+      position: relative;
+    }
 	}
 	&:focus {
 		outline: none;
 	}
 }
 .slick-next {
+  @include mq(medium--max) {
+    top: -8%;
+    right: 0;
+    display: block;
+    background-color: $gold-company;
+    width: 100px;
+    height: 50px;
+
+  }
 	position: absolute;
 	top: 35%;
 	z-index: 100;
@@ -165,6 +187,12 @@
 	right: -10%;
 	img {
 		width: 50%;
+      @include mq(medium--max) {
+      width: 20px;
+      right: -33px;
+      top: -15px;
+      position: relative;
+     }
 	}
 	&:focus {
 		outline: none;
@@ -182,4 +210,27 @@
 
 ._51mx {
   display: none !important;
+}
+
+.next-word {
+  display: none;
+  @include mq(medium--max) {
+    position: relative;
+    top: 13px;
+    right: 12px;
+    font-size: 18px;
+    display: block;
+  }
+}
+
+.previous-word {
+  display: none;
+  @include mq(medium--max) {
+    position: relative;
+    top: -29px;
+    font-size: 18px;
+    left: 11px;
+    font-size: 18px;
+    display: block;
+  }
 }

@@ -35,8 +35,8 @@ function sliderReview() {
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '<span class="slick-prev"><img src="https://images.bestcompany.com/left-slider-arrow@2x.png"></span>',
-    nextArrow: '<span class="slick-next"><img src="https://images.bestcompany.com/right-slider-arrow@2x.png"></span>',
+    prevArrow: '<div class="slick-prev"><img src="https://images.bestcompany.com/left-slider-arrow@2x.png"><div class="previous-word">previous</div></div>',
+    nextArrow: '<div class="slick-next"><div class="next-word">next</div> <img src="https://images.bestcompany.com/right-slider-arrow@2x.png"></div>',
     speed: 700
   });
   /*
