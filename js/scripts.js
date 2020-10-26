@@ -4,9 +4,13 @@
 import uswds from "../node_modules/uswds/src/js/start";
 import accordion from "./modules/_accordion";
 import sliderReview from "./modules/_slider-reviews";
+import galleryProduct from "./modules/_gallery-product";
+import productSlider from "./modules/_product-slider";
 
 accordion();
 sliderReview();
+galleryProduct();
+productSlider();
 
 
 

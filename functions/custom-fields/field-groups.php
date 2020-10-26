@@ -320,3 +320,79 @@ acf_add_local_field_group([
 	'active' => true,
 	'description' => '',
 ]);
+
+
+
+// product page page_template
+
+acf_add_local_field_group([
+	'key' => 'group_product_page',
+	'title' => 'Main gallery image',
+	'fields' => [
+		[
+			'key' => 'key_gallery_main',
+			'label' => 'Main Gallery Images',
+			'name' => 'gallery_main',
+			'type' => 'repeater',
+			'instructions' => '',
+			'layout' => 'table',
+			'sub_fields' => [
+				[
+					'key' => 'key_main_img_gallery',
+					'label' => 'Main gallery image',
+					'name' => 'main_img_gallery',
+					'type' => 'image',
+					'instructions' => 'Recommended image size 1920px x 1280px',
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+				],
+			],
+		],
+		[
+			'key' => 'key_features_group',
+			'label' => 'Pergola features',
+			'name' => 'pergola_features',
+			'type' => 'wysiwyg',
+			'instructions' => 'Must be in a list format',
+		],
+		[
+			'key' => 'key_tab_one',
+			'label' => 'Tab one content',
+			'name' => 'key_contact_banner_hero_imageone',
+			'type' => 'wysiwyg',
+			'instructions' => 'Content for tab one',
+		],
+		[
+			'key' => 'key_tab_two',
+			'label' => 'Tab two content',
+			'name' => 'tab_two',
+			'type' => 'wysiwyg',
+			'instructions' => 'Content for tab two',
+		],
+		[
+			'key' => 'key_tab_three',
+			'label' => 'Tab three content',
+			'name' => 'tab_three',
+			'type' => 'wysiwyg',
+			'instructions' => 'Content for tab three',
+		],
+
+	],
+	'location' => [
+		[
+			[
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-product.php',
+			],
+		],
+	],
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+]);

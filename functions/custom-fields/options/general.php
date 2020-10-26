@@ -50,6 +50,39 @@ acf_add_local_field_group([
 				],
 			],
 		],
+		[
+			'key' => 'key_product_slider',
+			'label' => 'Product slider',
+			'name' => 'product_slider_group',
+			'type' => 'repeater',
+			'instructions' => '',
+			'layout' => 'table',
+			'sub_fields' => [
+				[
+					'key' => 'product_slider_image_key',
+					'label' => 'Product Slider Image',
+					'name' => 'product_slider',
+					'type' => 'image',
+					'instructions' => '',
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+				],
+				[
+					'key' => 'product_slider_text_key',
+					'label' => 'Button label',
+					'name' => 'product_label',
+					'type' => 'text',
+					'instructions' => '',
+				],
+				[
+					'key' => 'product_slider_link_key',
+					'label' => 'url',
+					'name' => 'product_link',
+					'type' => 'link',
+					'instructions' => '',
+				],
+			],
+		],
 	],
 	'location' => [
 		[

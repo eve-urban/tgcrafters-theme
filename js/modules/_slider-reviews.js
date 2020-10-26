@@ -4,8 +4,8 @@
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: '<div class="slick-prev"><img src="https://images.bestcompany.com/left-slider-arrow@2x.png"><div class="previous-word">previous</div></div>',
-    nextArrow:'<div class="slick-next"><div class="next-word">next</div> <img src="https://images.bestcompany.com/right-slider-arrow@2x.png"></div>',
+    prevArrow: '<div class="slick-prev"><img src="/wp-content/themes/tgcrafters-theme/img/previous-arrow.png"><div class="previous-word">previous</div></div>',
+    nextArrow:'<div class="slick-next"><div class="next-word">next</div> <img src="/wp-content/themes/tgcrafters-theme/img/next-arrow.png"></div>',
     speed: 700
   });
 /*
