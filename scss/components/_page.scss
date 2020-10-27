@@ -86,14 +86,26 @@
     background-size: cover;
     background-position: 50%;
     color: $color-white;
+    background-color: #5b616b;
+    label{
+      margin-top: 0;
+      width: 100%;
+      font-weight: bold;
+    }
     textarea,
     input {
       background: transparent !important;
+      border: 1px solid $color-white;
       color: $color-gray-lightest !important;
       &:focus {
         background: rgba(160, 206, 76, .1) !important;
         border-color: #f7c51e !important;
       }
+    }
+    .wpcf7-submit {
+      background-color: $gold-company !important;
+      color: $color-black !important;
+      padding: $content-margin * 1 !important;
     }
     .nf-error .ninja-forms-field {
       border-color: #f7c51e !important;

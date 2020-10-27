@@ -85,9 +85,9 @@ function productSlider() {
 
     $('.promotionalslider_wrapper').slick({
       infinite: false,
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
       responsive: [{
         breakpoint: 768,
         settings: {

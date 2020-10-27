@@ -1,5 +1,6 @@
 .golden-btn,
-input[type="button"] {
+input[type="button"],
+.wpcf7-submit {
   background-color: transparent !important;;
   border-radius: 0 !important;
   border: 3px solid $gold-company !important;
@@ -20,4 +21,8 @@ input[type="button"] {
 .golden-btn--main-page {
   background-color: $gold-company !important;
   color: $color-black !important;
+}
+
+.wpcf7-submit {
+  width: 100% !important;
 }

@@ -26,9 +26,15 @@ body {
 
 
   .worko-tabs {
+    p {
+      font-family: $font-lato !important;
+    }
     position: relative;
     top: -40px;
     width: 80%;
+    @include mq(medium--max) {
+      width: 100%;
+    }
 
       .state{
         position: absolute;

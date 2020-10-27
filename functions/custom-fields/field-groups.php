@@ -327,8 +327,15 @@ acf_add_local_field_group([
 
 acf_add_local_field_group([
 	'key' => 'group_product_page',
-	'title' => 'Main gallery image',
+	'title' => 'Gallery fields',
 	'fields' => [
+		[
+			'key' => 'key_features_header',
+			'label' => 'Product Header',
+			'name' => 'product_header',
+			'type' => 'text',
+			'instructions' => '',
+		],
 		[
 			'key' => 'key_gallery_main',
 			'label' => 'Main Gallery Images',
@@ -358,7 +365,7 @@ acf_add_local_field_group([
 		[
 			'key' => 'key_tab_one',
 			'label' => 'Tab one content',
-			'name' => 'key_contact_banner_hero_imageone',
+			'name' => 'tab_one',
 			'type' => 'wysiwyg',
 			'instructions' => 'Content for tab one',
 		],

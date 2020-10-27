@@ -1,6 +1,16 @@
 .gallery {
+  .quote-btn {
+    margin-top: $content-margin * 2;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    a:hover {
+      text-decoration: none;
+    }
+  }
   &__container {
     @include container();
+    padding-top: 0;
     font-family: $font-releway;
     display: flex;
     color: $grey-company;
@@ -20,6 +30,11 @@
 
   }
   &__features {
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: $content-margin;
+      margin-top: $content-margin;
+    }
     @include mq(two-column--max) {
       width: 100%;
     }
@@ -149,5 +164,15 @@
   }
   .product-images .thumb-nav li.slick-current img {
     border-color: #d12f81;
+  }
+}
+
+.top-strip {
+  background-color: $bg-gray;
+  font-weight: bold;
+  &__container {
+    @include container();
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

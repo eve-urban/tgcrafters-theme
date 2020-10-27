@@ -1,9 +1,13 @@
 {% extends "base.twig" %}
 {% block content %}
+	<section class="top-strip">
+		<div class="top-strip__container">
+		Timber&Glass Crafters	*** #1 supplier and installer of garden pergolas in the UK ***
+		</div>
+	</section>
 	<section class="gallery">
 		<div class="gallery__container">
 			<div class="gallery__box">
-
 				<section id="detail">
 				  <div class="gallery__product-container">
 				    <div class="row">
@@ -12,29 +16,19 @@
 				          <div class="product-images demo-gallery">
 				            <!-- Begin Product Images Slider -->
 				            <div class="main-img-slider">
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/000/fff"><img src="https://dummyimage.com/840x480/000/fff" class="img-fluid"></a>
 
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/d10fd1/ff00ff"><img src="https://dummyimage.com/840x480/d10fd1/ff00ff" class="img-fluid"></a>
-
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/1036cf/ff00ff"><img src="https://dummyimage.com/840x480/1036cf/ff00ff" class="img-fluid"></a>
-
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/10cf5d/ff00ff"><img src="https://dummyimage.com/840x480/10cf5d/ff00ff" class="img-fluid"></a>
-
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/cf1010/ff00ff"><img src="https://dummyimage.com/840x480/cf1010/ff00ff" class="img-fluid"></a>
-
-				               <a data-fancybox="gallery" href="https://dummyimage.com/1920x1280/cfb910/ff00ff"><img src="https://dummyimage.com/840x480/cfb910/ff00ff" class="img-fluid"></a>
+											{% for img in main_gallery %}
+												<a data-fancybox="gallery" href="{{img.main_img_gallery.url}}"><img src="{{ img.main_img_gallery.url|resize(840, 480) }}" class="img-fluid"></a>
+											{% endfor %}
 
 				          	</div>
 				          <!-- End Product Images Slider -->
 
 				          <!-- Begin product thumb nav -->
 				          <ul class="thumb-nav">
-				            <li><img src="https://dummyimage.com/72x50/000/fff"</li>
-				            <li><img src="https://dummyimage.com/72x50/d10fd1/ff00ff"></li>
-				            <li><img src="https://dummyimage.com/72x50/1036cf/ff00ff"></li>
-				            <li><img src="https://dummyimage.com/72x50/10cf5d/ff00ff"></li>
-				            <li><img src="https://dummyimage.com/72x50/cf1010/ff00ff"></li>
-				            <li><img src="https://dummyimage.com/72x50/cfb910/ff00ff"></li>
+										{% for img in main_gallery %}
+											<li><img src="{{ img.main_img_gallery.url|resize(72, 50) }}"</li>
+										{% endfor %}
 
 
 
@@ -51,15 +45,9 @@
 
 			</div>
 			<div class="gallery__features">
-				<h1>Pergola Features</h1>
-				<ul>
-
-					<li>one</li>
-					<li>one</li>
-					<li>one</li>
-					<li>one</li>
-
-				</ul>
+				<h1>{{fields.product_header}}</h1>
+				{{fields.pergola_features}}
+				<a class="quote-btn golden-btn golden-btn--main-page" href="http://tgcrafters.co.uk/get-a-free-quote/">Get a FREE quote</a>
 			</div>
 		</div>
 
@@ -82,14 +70,13 @@
 
 
         <div id="tab-one-panel" class="panel active">
-          <h3>Responsive CSS Tabs - Flexbox</h3>
-          <p>CSS only tabs built using flexbox, when the viewport drops below 600px wide the tabs turn into an accordion by chaging the flex order of the elements.</p>
+					{{fields.tab_one}}
         </div>
         <div id="tab-two-panel" class="panel">
-            Tab two content
+           {{fields.tab_two}}
         </div>
         <div id="tab-three-panel" class="panel">
-            Tab three content
+            {{fields.tab_three}}
         </div>
 
     </div>
@@ -97,35 +84,22 @@
 		</div>
 	</div>
 </section>
-
 <section class="product-slider">
 	<div id="promotional_slider">
 		<h3>Similar products</h3>
 	  <div class="promotionalslider_wrapper">
-	     <div class="promotionalslider_single">
-	      <a href="#">
-	        <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide1.jpg?214970)"></section>
-	        <p>Slide 1</p>
-	      </a>
-	    </div>
-	     <div class="promotionalslider_single">
-	      <a href="">
-	        <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide2.jpg?214970)"></section>
-	        <p>Slide 2</p>
-	      </a>
-	    </div>
-	     <div class="promotionalslider_single">
-	      <a href="">
-	        <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide3.jpg?214970)"></section>
-	        <p>Slide 3</p>
-	      </a>
-	    </div>
-	     <div class="promotionalslider_single">
-	      <a href="">
-	        <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide4.jpg?214970)"></section>
-	        <p>Slide 4</p>
-	      </a>
-	    </div>
+			{% for slide in options.product_slider_group %}
+				<div class="promotionalslider_single">
+				<a href="{{slide.product_link.url| resize(483, 362)}}">
+					<section style='background-image: url({{slide.product_slider.url}})'></section>
+					<p>{{slide.product_label}}</p>
+				</a>
+			</div>
+			{% endfor %}
+
+
+
+
 	     <div class="promotionalslider_single">
 	        <a href="">
 	          <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide5.jpg?214970)"></section>
