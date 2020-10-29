@@ -89,29 +89,14 @@
 		<h3>Similar products</h3>
 	  <div class="promotionalslider_wrapper">
 			{% for slide in options.product_slider_group %}
+		
 				<div class="promotionalslider_single">
-				<a href="{{slide.product_link.url| resize(483, 362)}}">
-					<section style='background-image: url({{slide.product_slider.url}})'></section>
+				<a href="{{slide.product_link.link}}">
+					<section style='background-image: url({{slide.product_slider.url| resize(483, 362)}})'></section>
 					<p>{{slide.product_label}}</p>
 				</a>
 			</div>
 			{% endfor %}
-
-
-
-
-	     <div class="promotionalslider_single">
-	        <a href="">
-	          <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide5.jpg?214970)"></section>
-	          <p>Slide 5</p>
-	        </a>
-	    </div>
-	         <div class="promotionalslider_single">
-	      <a href="">
-	        <section style="background-image: url(//cdn.shopify.com/s/files/1/2248/5209/t/8/assets/promo_slide2.jpg?214970)"></section>
-	        <p>Slide 6</p>
-	      </a>
-	    </div>
 	   </div>
 	</div>
 
