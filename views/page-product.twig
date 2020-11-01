@@ -89,9 +89,8 @@
 		<h3>Similar products</h3>
 	  <div class="promotionalslider_wrapper">
 			{% for slide in options.product_slider_group %}
-		
 				<div class="promotionalslider_single">
-				<a href="{{slide.product_link.link}}">
+				<a href="{{slide.product_link.url}}">
 					<section style='background-image: url({{slide.product_slider.url| resize(483, 362)}})'></section>
 					<p>{{slide.product_label}}</p>
 				</a>

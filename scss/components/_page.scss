@@ -43,6 +43,13 @@
       }
     }
     &--second {
+      li {
+        a {
+          text-decoration: none;
+          color: $grey-company;
+          font-weight: bold;
+        }
+      }
       width: 30%;
       padding-left: $content-margin;
       @include mq(medium--max) {
@@ -85,8 +92,8 @@
   &--contact-form {
     background-size: cover;
     background-position: 50%;
-    color: $color-white;
-    background-color: #5b616b;
+    color: $grey-company;
+    background-color: $color-white;
     label{
       margin-top: 0;
       width: 100%;
@@ -95,11 +102,13 @@
     textarea,
     input {
       background: transparent !important;
-      border: 1px solid $color-white;
-      color: $color-gray-lightest !important;
+      border: 1px solid $color-gray-light;
+      color: $grey-company !important;
+      font-weight: normal !important;
       &:focus {
         background: rgba(160, 206, 76, .1) !important;
         border-color: #f7c51e !important;
+        color: $grey-company !important;
       }
     }
     .wpcf7-submit {
@@ -132,6 +141,10 @@
       h2 {
         display: inline;
         width: 75%;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $grey-company;
       }
     }
   }

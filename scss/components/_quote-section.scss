@@ -11,7 +11,7 @@
     text-align: center;
   }
   &__step-number {
-    font-size: 2rem;
+    font-size: 2rem !important;
     padding-bottom: 53px;
     width: 53px;
     height: 47px;
@@ -34,6 +34,7 @@
     @include mq(medium--max) {
       width: 100%;
       margin-bottom: 2rem;
+      font-size: 1.2rem;
     }
   }
   &__container {

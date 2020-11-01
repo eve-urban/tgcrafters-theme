@@ -3,10 +3,19 @@ body {
 }
 
 .product-tabs {
+  .panel {
+    padding: 0!important;
+  }
   background-color: $bg-gray;
   margin-top: $content-margin * 4;
   label {
     margin-top: 0;
+      @include mq(medium--max) {
+        width: 100%;
+        display: block !important;
+        max-height: 60px !important;
+        padding: 1rem !important;
+      }
   }
   &__container {
     @include container();

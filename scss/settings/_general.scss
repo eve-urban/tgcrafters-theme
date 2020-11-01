@@ -1,0 +1,5 @@
+a, p, span {
+  @include mq(medium--max) {
+    font-size: 1.2rem !important;
+  }
+}

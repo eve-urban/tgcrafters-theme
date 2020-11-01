@@ -25,6 +25,9 @@
     h2 {
       font-size: 1rem;
       margin-top: 0;
+      @include mq(medium--max) {
+        font-size: 1.3rem;
+      }
     }
     .box {
       width: 20rem;

@@ -34,15 +34,23 @@
       font-size: 1.8rem;
       margin-bottom: $content-margin;
       margin-top: $content-margin;
+      @include mq(two-column--max) {
+        font-size: 1.6rem;
+      }
     }
     @include mq(two-column--max) {
       width: 100%;
+      font-size: 1.2rem;
+      padding: 0;
     }
     padding: 0 1rem;
     ul {
       padding-left: 0px;
       li {
         list-style-type: none;
+        @include mq(two-column--max) {
+          margin-bottom: $content-margin;
+        }
       }
     }
     ul li:before {
@@ -163,7 +171,7 @@
     border-color: #999;
   }
   .product-images .thumb-nav li.slick-current img {
-    border-color: #d12f81;
+    border-color: $gold-company;
   }
 }
 

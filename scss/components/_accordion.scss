@@ -10,6 +10,9 @@
   font-size: 15px;
   transition: 0.4s;
   border-radius: 0 !important;
+  @include mq(medium--max) {
+    font-size: 1.2rem;
+  }
   &:after {
     content: '\002B';
     color: #777;
@@ -33,9 +36,10 @@
 
 
 .panel {
-  padding: 0 18px;
+  padding: $content-margin 18px;
   display: none;
   background-color: white;
   overflow: hidden;
+
 
 }

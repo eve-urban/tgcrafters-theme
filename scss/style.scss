@@ -178,7 +178,33 @@ aside {
 	}
 }
 
+.usa-nav-submenu a,
+.usa-nav-submenu a:hover {
+  @include mq(medium--max) {
+    padding-left: 0.7rem;
+  }
+}
 
+.usa-nav-submenu a:hover {
+    border-left: 3px solid $gold-company;
+  }
+
+.usa-nav-secondary-links a:hover {
+  color: $grey-company;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.usa-nav-secondary-links a {
+  @include mq(medium--max) {
+    margin-bottom: $content-margin;
+  }
+}
+
+.usa-nav.is-visible {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
 @import "./base/type";
 @import "./components/buttons";
 @import "./components/icons";
@@ -205,3 +231,4 @@ aside {
 @import "./components/gallery-product";
 @import "./components/product-tabs";
 @import "./components/product-slider";
+@import "./settings/general";

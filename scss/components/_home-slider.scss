@@ -34,6 +34,11 @@ body {
   width: 100%;
   overflow-x: hidden;
   .container-slider {
+    @include mq(medium--max) {
+      height: 68vh;
+      min-width: 320px;
+      min-height: 434px;
+    }
     width: 100%;
     height: 90vh;
     min-width: 360px;
@@ -42,6 +47,11 @@ body {
     display: flex;
     flex-direction: column;
     .slider {
+      a {
+        @include mq(medium--max) {
+          text-align: center;
+        }
+      }
       @include small {
         width: 100%;
         height: 100%;
@@ -80,6 +90,9 @@ body {
           border-radius: 0;
         }
         .content {
+          @include mq(medium--max) {
+            line-height: 1.7;
+          }
           background-color: rgba($color: rgb(12, 12, 12), $alpha: 0.7);
           padding: 1.5rem 1rem;
           display: flex;
@@ -189,7 +202,7 @@ body {
       }
       .nav {
         position: absolute;
-        bottom: 10%;
+        bottom: 5%;
         width: 100%;
         text-align: center;
         display: flex;

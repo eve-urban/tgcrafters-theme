@@ -3,7 +3,7 @@
   background-color: $color-gray-lightest;
   color: $color-gray;
   @include mq(two-column--max) {
-    height: 56px;
+    height: 72px;
   }
   &__container {
     max-width: $container-width;
@@ -53,6 +53,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
+      margin-top: $content-margin;
     }
     &--boxone {
       padding-right: $content-margin * 2;
@@ -71,6 +72,15 @@
       align-items: center;
       @include mq(two-column--max) {
         padding-right: $content-margin;
+      }
+      a {
+        text-decoration: none;
+        color: $grey-company;
+        &:hover {
+          text-decoration: none;
+          font-weight: bold;
+          color: $grey-company;
+        }
       }
     }
     span {
@@ -98,6 +108,14 @@
   &__container {
     max-width: $container-width;
     margin: 0 auto;
+    li {
+      :hover {
+        @include mq(medium--max) {
+          background-color: $color-white !important;
+        }
+      }
+
+    }
   }
   &__secondary {
       top: -11.4rem;
@@ -202,7 +220,7 @@ nav.usa-nav {
 
 .usa-menu-btn {
   background-color: $grey-company;
-  height: 3.5rem;
+  height: 4.5rem;
   width: 5rem;
   line-height: 0;
 }
